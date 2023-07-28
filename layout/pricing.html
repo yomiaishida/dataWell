@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css//styles.css" />
+    <link
+      href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="container" id="nav">
+      <!-- Mobile -->
+
+      <div
+        class="lg:hidden flex items-center container mx-auto py-4 justify-between"
+        id="menuItems"
+      >
+        <div class="space-x-4 relative">
+          <!-- Hamburger Icon Button -->
+          <button
+            id="hamburgerBtn"
+            class="bg-transparent border rounded-full ml-4 p-2"
+          >
+            <svg
+              class="fill-gray-400 w-4 h-4"
+              focusable="false"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              data-testid="CloseIcon"
+            >
+              <path
+                d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- Search Icon Button -->
+          <button
+            id="searchIcon"
+            class="bg-transparent border rounded-full p-2"
+          >
+            <svg
+              class="text-lg w-4 h-4 fill-gray-400"
+              focusable="false"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              data-testid="SearchIcon"
+            >
+              <path
+                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- Mobile Menu -->
+          <ul
+            id="mobileMenu"
+            class="flex flex-col mx-auto items-center absolute z-10 bg-white ml-0 h-screen mt-20 w-screen"
+          >
+            <li
+              class="text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+            >
+              <a href="/">Home</a>
+            </li>
+            <li
+              class="before:w-full text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+            >
+              <a href="/about">About</a>
+            </li>
+            <li
+              class="false text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+            >
+              <a href="/about#services">Services</a>
+            </li>
+            <li
+              class="false text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+            >
+              <a href="/pricing">Pricing</a>
+            </li>
+            <li
+              class="false text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+            >
+              <a href="/contact">Contact</a>
+            </li>
+            <li
+              class="false text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+            >
+              <a href="/blog">Blog</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Login Button -->
+        <a
+          href="/auth/login"
+          class="bg-[#D10A22] z-10 hover:bg-red-800 text-white rounded-3xl flex px-4 py-2 sm:px-6 sm:py-3 text-xs sm:text-sm font-bold"
+        >
+          <svg
+            class="w-4 h-4 mr-2 fill-white text-base"
+            focusable="false"
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+            data-testid="HttpsOutlinedIcon"
+          >
+            <path
+              d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"
+            ></path>
+          </svg>
+          Login
+        </a>
+
+        <!-- DataWell Logo on small screens -->
+        <a href="/">
+          <img
+            alt="The Data Well Logo"
+            loading="lazy"
+            width="1288"
+            height="1288"
+            decoding="async"
+            data-nimg="1"
+            class="w-16 lg:hidden mr-4"
+            src="/images/The Data Well logo oppo.png"
+          />
+        </a>
+      </div>
+
+      <hr class="border-red-600" />
+      <input
+        id="searchInput"
+        class="hidden text-base border-b-2 border-gray-300 outline-none focus:outline-none transition-width w-full px-4 py-2 pl-10"
+        placeholder="Search"
+        type="search"
+      />
+
+      <div
+        class="relative text-white lg:w-full hidden lg:block z-[999999999999999]"
+      >
+        <a href="/layout/">
+          <img
+            src="../images//The Data Well logo oppo.png"
+            alt="The Data Well Logo"
+            loading="lazy"
+            width="1288"
+            height="1288"
+            decoding="async"
+            data-nimg="1"
+            class="absolute z-[999999999999999] w-24 xl:w-32 right-[16px] top-[30px] lg:block hidden animate__animated animate__fadeInDown"
+            style="color: transparent"
+          />
+        </a>
+
+        <div
+          class="absolute bg-[#D10A22] top-0 left-0 -z-[1] lg:block h-[72px] lg:w-[70%] xl:w-[60%] 2xl:w-[50%]"
+        ></div>
+        <ul class="space-x-8 flex text-white">
+          <li
+            class="before:w-full ml-20 text-neutral-50 hover:text-white before:bg-white py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+          >
+            <a href="/">Home</a>
+          </li>
+          <li
+            class="false text-neutral-50 hover:text-white before:bg-white py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+          >
+            <a href="/">About</a>
+          </li>
+          <li
+            class="false text-neutral-50 hover:text-white before:bg-white py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+          >
+            <a href="/">Services</a>
+          </li>
+          <li
+            class="false text-neutral-50 hover:text-white before:bg-white py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+          >
+            <a href="/">Pricing</a>
+          </li>
+          <li
+            class="false text-neutral-50 hover:text-white before:bg-white py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+          >
+            <a href="/">Contact</a>
+          </li>
+          <li
+            class="false text-neutral-50 hover:text-white before:bg-white py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+          >
+            <a href="/">Blog</a>
+          </li>
+
+          <li>
+            <button
+              class="text-white my-6 ml-4"
+              id="lgSearchIcon"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                width="24px"
+                height="24px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+              <span class="MuiTouchRipple-root css-w0pj6f"></span>
+            </button>
+          </li>
+
+          <li
+            class="relative px-16 py-6 space-x-2 font-bold tracking-wide cursor-pointer loginLi center"
+          >
+            <a href="/auth/login" class="flex flex-row items-center">
+              <div
+                class="absolute h-full w-full top-0 left-0 -z-[1] transform -skew-x-[27deg] bg-[#A0081A] logindiv transition-colors duration-500"
+              ></div>
+              <div class="flex flex-col"></div>
+              <svg
+                class="w-4 h-4 mr-2 fill-white text-base"
+                focusable="false"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                data-testid="HttpsOutlinedIcon"
+              >
+                <path
+                  d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"
+                ></path>
+              </svg>
+              <span>Login</span>
+              <svg
+                class="w-6 h-6 mr-2 fill-white"
+                focusable="false"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                data-testid="NavigateNextRoundedIcon"
+              >
+                <path
+                  d="M9.31 6.71c-.39.39-.39 1.02 0 1.41L13.19 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.72 6.7c-.38-.38-1.02-.38-1.41.01z"
+                ></path>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        id="lgSearchInput"
+        class="hidden h-[88px] absolute w-[796px] bg-gray-100 transition-height overflow-hidden text-gray-900 left-16 z-[9999999999999999999999999] shadow-md"
+      >
+        <input
+          class="text-base border-none outline-none focus:outline-none transition-width w-full px-4 py-8"
+          placeholder="Search"
+          type="search"
+        />
+      </div>
+    </nav>
+
+    <section
+      class="flex container mx-auto px-4 md:px-0 justify-center bg-gray-100 h-60 lg:h-96"
+    >
+      <div class="h-full flex flex-col justify-center items-center">
+        <div class="space-y-2 text-center lg:space-y-4 w-fit col-center">
+          <h2
+            class="font-sans text-3xl font-bold text-gray-800 lg:text-5xl md:text-4xl animate-fadeInDown"
+          >
+            Pricing
+          </h2>
+          <p
+            class="text-sm text-gray-500 md:text-base lg:text-lg center animate-fadeInDown"
+          >
+            Trustworthy experience, dependable service.
+          </p>
+        </div>
+        <div class="mt-4 space-x-2 lg:mt-8 center animate-fadeInDown">
+          <a href="/auth/signup">
+            <button
+              class="px-4 py-2 lg:px-10 lg:py-4 text-xs lg:text-sm font-bold text-white bg-[#D10A22] rounded lg:rounded-lg normal-case hover:bg-[#A0081A] css-1ujsas3"
+              tabindex="0"
+              type="button"
+            >
+              Get Started<span class="MuiTouchRipple-root css-w0pj6f"></span>
+            </button>
+          </a>
+          <a href="/auth/login">
+            <button
+              class="px-4 py-2 lg:px-10 lg:py-4 text-xs lg:text-sm font-bold text-white bg-[#D10A22] rounded lg:rounded-lg normal-case hover:bg-[#A0081A] css-1ujsas3"
+              tabindex="0"
+              type="button"
+            >
+              Login<span class="MuiTouchRipple-root css-w0pj6f"></span>
+            </button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div
+      class="space-y-20 py-14 md:py-20 2xl:py-32 md:space-y-32 lg:space-y-40 xl:space-y-60 container_fluid"
+    >
+      <div class="max-w-xs mx-auto md:max-w-none">
+        <h1
+          data-aos="fade-up"
+          data-aos-once="true"
+          data-aos-duration="1000"
+          class="text-xl font-bold text-center text-gray-800 sm:text-2xl xl:text-4xl md:text-3xl lg:text-left aos-init aos-animate"
+        >
+          Data Pricing
+        </h1>
+        <div
+          class="mt-5 space-y-10 md:mt-8 lg:mt-10 md:space-y-0 lg:space-x-4 md:between-start"
+        >
+          <div
+            data-aos="fade-up"
+            data-aos-once="true"
+            data-aos-duration="1000"
+            class="p-8 lg:p-12 bg-white rounded-lg shadow-md lg:shadow-xl lg:min-w-[310px] xl:min-w-[370px] col-center aos-init aos-animate"
+          >
+            <img
+              alt="Glo"
+              data-aos="fade-up"
+              data-aos-once="true"
+              data-aos-duration="1000"
+              loading="lazy"
+              width="128"
+              height="128"
+              decoding="async"
+              data-nimg="1"
+              class="object-contain w-20 h-20 rounded-full md:h-24 md:w-24 lg:w-32 lg:h-32 bg-gray-50 aos-init aos-animate"
+              srcset="
+                /_next/image?url=%2Fimages%2Fglobacom.png&amp;w=128&amp;q=75 1x,
+                /_next/image?url=%2Fimages%2Fglobacom.png&amp;w=256&amp;q=75 2x
+              "
+              src="/_next/image?url=%2Fimages%2Fglobacom.png&amp;w=256&amp;q=75"
+              style=""
+            />
+            <p
+              data-aos="fade-up"
+              data-aos-once="true"
+              data-aos-duration="1000"
+              class="mt-1 text-sm font-bold md:text-base lg:mt-2 aos-init aos-animate"
+            >
+              Glo
+            </p>
+            <div class="mt-8 space-y-4 lg:space-y-8 md:mt-12 lg:mt-16">
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">3.9GB</span
+                ><span class="text-gray-500">=&gt;</span
+                ><span class="font-bold text-gray-800">₦900</span>
+              </p>
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">20GB</span
+                ><span class="text-gray-500">=&gt;</span
+                ><span class="font-bold text-gray-800">₦7200</span>
+              </p>
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">26GB</span
+                ><span class="text-gray-500">=&gt;</span
+                ><span class="font-bold text-gray-800">₦9000</span>
+              </p>
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">42GB</span
+                ><span class="text-gray-500">=&gt;</span
+                ><span class="font-bold text-gray-800">₦13500</span>
+              </p>
+            </div>
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-once="true"
+            data-aos-duration="1000"
+            class="p-8 lg:p-12 bg-white rounded-lg shadow-md lg:shadow-xl lg:min-w-[310px] xl:min-w-[370px] col-center aos-init aos-animate"
+          >
+            <img
+              alt="MTN"
+              data-aos="fade-up"
+              data-aos-once="true"
+              data-aos-duration="1000"
+              loading="lazy"
+              width="128"
+              height="128"
+              decoding="async"
+              data-nimg="1"
+              class="object-contain w-20 h-20 rounded-full md:h-24 md:w-24 lg:w-32 lg:h-32 bg-gray-50 aos-init aos-animate"
+              srcset="
+                /_next/image?url=%2Fimages%2Fmtn.png&amp;w=128&amp;q=75 1x,
+                /_next/image?url=%2Fimages%2Fmtn.png&amp;w=256&amp;q=75 2x
+              "
+              src="/_next/image?url=%2Fimages%2Fmtn.png&amp;w=256&amp;q=75"
+              style=""
+            />
+            <p
+              data-aos="fade-up"
+              data-aos-once="true"
+              data-aos-duration="1000"
+              class="mt-1 text-sm font-bold md:text-base lg:mt-2 aos-init aos-animate"
+            >
+              MTN
+            </p>
+            <div class="mt-8 space-y-4 lg:space-y-8 md:mt-12 lg:mt-16">
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">500MB</span
+                ><span class="text-gray-500">=&gt;</span
+                ><span class="font-bold text-gray-800">₦140</span>
+              </p>
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">1GB</span
+                ><span class="text-gray-500">=&gt;</span
+                ><span class="font-bold text-gray-800">₦230</span>
+              </p>
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">2GB</span
+                ><span class="text-gray-500">=&gt;</span
+                ><span class="font-bold text-gray-800">₦460</span>
+              </p>
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">5GB</span
+                ><span class="text-gray-500">=&gt;</span
+                ><span class="font-bold text-gray-800">₦1150</span>
+              </p>
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">10GB</span
+                ><span class="text-gray-500">=&gt;</span
+                ><span class="font-bold text-gray-800">₦2300</span>
+              </p>
+            </div>
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-once="true"
+            data-aos-duration="1000"
+            class="p-8 lg:p-12 bg-white rounded-lg shadow-md lg:shadow-xl lg:min-w-[310px] xl:min-w-[370px] col-center aos-init aos-animate"
+          >
+            <img
+              alt="9Mobile"
+              data-aos="fade-up"
+              data-aos-once="true"
+              data-aos-duration="1000"
+              loading="lazy"
+              width="128"
+              height="128"
+              decoding="async"
+              data-nimg="1"
+              class="object-contain w-20 h-20 rounded-full md:h-24 md:w-24 lg:w-32 lg:h-32 bg-gray-50 aos-init aos-animate"
+              srcset="
+                /_next/image?url=%2Fimages%2F9mobile.png&amp;w=128&amp;q=75 1x,
+                /_next/image?url=%2Fimages%2F9mobile.png&amp;w=256&amp;q=75 2x
+              "
+              src="/_next/image?url=%2Fimages%2F9mobile.png&amp;w=256&amp;q=75"
+              style=""
+            />
+            <p
+              data-aos="fade-up"
+              data-aos-once="true"
+              data-aos-duration="1000"
+              class="mt-1 text-sm font-bold md:text-base lg:mt-2 aos-init aos-animate"
+            >
+              9Mobile
+            </p>
+            <div class="mt-8 space-y-4 lg:space-y-8 md:mt-12 lg:mt-16">
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">500MB</span
+                ><span class="text-gray-500">=&gt;</span
+                ><span class="font-bold text-gray-800">₦475</span>
+              </p>
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">1.536GB</span
+                ><span class="text-gray-500">=&gt;</span
+                ><span class="font-bold text-gray-800">₦950</span>
+              </p>
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">2.048GB</span
+                ><span class="text-gray-500">=&gt;</span
+                ><span class="font-bold text-gray-800">₦1140</span>
+              </p>
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">3.072GB</span
+                ><span class="text-gray-500">=&gt;</span
+                ><span class="font-bold text-gray-800">₦1425</span>
+              </p>
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">4.608GB</span
+                ><span class="text-gray-500">=&gt;</span
+                ><span class="font-bold text-gray-800">₦1900</span>
+              </p>
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">11.264GB</span
+                ><span class="text-gray-500">=&gt;</span
+                ><span class="font-bold text-gray-800">₦3800</span>
+              </p>
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">15.36GB</span
+                ><span class="text-gray-500">=&gt;</span
+                ><span class="font-bold text-gray-800">₦4750</span>
+              </p>
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">40.96GB</span
+                ><span class="text-gray-500">=&gt;</span
+                ><span class="font-bold text-gray-800">₦9500</span>
+              </p>
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">76.8GB</span
+                ><span class="text-gray-500">=&gt;</span
+                ><span class="font-bold text-gray-800">₦14250</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h1
+          data-aos="fade-up"
+          data-aos-once="true"
+          data-aos-duration="1000"
+          class="text-xl font-bold text-center text-gray-800 sm:text-2xl xl:text-4xl md:text-3xl lg:text-left aos-init aos-animate"
+        >
+          Other Pricing
+        </h1>
+        <div
+          class="mt-5 space-y-10 lg:mt-10 lg:space-x-10 lg:between-start lg:space-y-0"
+        >
+          <div
+            data-aos="fade-up"
+            data-aos-once="true"
+            data-aos-duration="1000"
+            class="w-full aos-init aos-animate"
+          >
+            <h6
+              data-aos="fade-up"
+              data-aos-once="true"
+              data-aos-duration="1000"
+              class="w-full px-4 py-4 text-sm font-bold text-gray-500 md:text-base bg-gray-50 inline-between aos-init aos-animate"
+            >
+              <span>Bill Payments</span><span>Discount</span>
+            </h6>
+            <div class="px-4 mt-4 space-y-4 lg:mt-8 lg:space-y-8">
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">DSTV</span
+                ><span class="font-bold text-gray-800">1%</span>
+              </p>
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">GOTV</span
+                ><span class="font-bold text-gray-800">1%</span>
+              </p>
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">STARTIMES</span
+                ><span class="font-bold text-gray-800">1.5%</span>
+              </p>
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">SMILE RECHARGE</span
+                ><span class="font-bold text-gray-800">2%</span>
+              </p>
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">SPECTRANET</span
+                ><span class="font-bold text-gray-800">2.5%</span>
+              </p>
+            </div>
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-once="true"
+            data-aos-duration="1000"
+            class="w-full aos-init aos-animate"
+          >
+            <h6
+              data-aos="fade-up"
+              data-aos-once="true"
+              data-aos-duration="1000"
+              class="w-full px-4 py-4 text-sm font-bold text-gray-500 md:text-base bg-gray-50 inline-between aos-init aos-animate"
+            >
+              <span>Airtime Discounts</span><span>Discount</span>
+            </h6>
+            <div class="px-4 mt-4 space-y-4 lg:mt-8 lg:space-y-8">
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">MTN</span
+                ><span class="font-bold text-gray-800">2%</span>
+              </p>
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">MTN - PREMIUM</span
+                ><span class="font-bold text-gray-800">3%</span>
+              </p>
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">AIRTEL</span
+                ><span class="font-bold text-gray-800">3%</span>
+              </p>
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">9MOBILE</span
+                ><span class="font-bold text-gray-800">4%</span>
+              </p>
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">9MOBILE - PREMIUM</span
+                ><span class="font-bold text-gray-800">5%</span>
+              </p>
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">GLO</span
+                ><span class="font-bold text-gray-800">5%</span>
+              </p>
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">GLO - PREMIUM</span
+                ><span class="font-bold text-gray-800">7%</span>
+              </p>
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">VISAPHONE</span
+                ><span class="font-bold text-gray-800">5%</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8">
+          <div
+            data-aos="fade-up"
+            data-aos-once="true"
+            data-aos-duration="1000"
+            class="w-full aos-init aos-animate"
+          >
+            <h6
+              data-aos="fade-up"
+              data-aos-once="true"
+              data-aos-duration="1000"
+              class="w-full px-4 py-4 text-sm font-bold text-gray-500 md:text-base bg-gray-50 inline-between aos-init aos-animate"
+            >
+              <span>Airtime to Cash</span><span>Rate</span>
+            </h6>
+            <div class="px-4 mt-4 space-y-4 lg:mt-8 lg:space-y-8">
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">MTN</span
+                ><span class="font-bold text-gray-800">85%</span>
+              </p>
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">GLO</span
+                ><span class="font-bold text-gray-800">75%</span>
+              </p>
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="space-x-4 text-sm lg:space-x-8 between md:text-base aos-init aos-animate"
+              >
+                <span class="text-gray-500">9MOBILE</span
+                ><span class="font-bold text-gray-800">80%</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
