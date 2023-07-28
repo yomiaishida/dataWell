@@ -3,12 +3,277 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css//styles.css" />
+    <link
+      href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
-    <section class="bg-gray-100 h-60 lg:h-96">
-      <div class="h-full container_fluid col-center">
+    <nav class="container" id="nav">
+      <!-- Mobile -->
+
+      <div
+        class="lg:hidden flex items-center container mx-auto py-4 justify-between"
+        id="menuItems"
+      >
+        <div class="space-x-4 relative">
+          <!-- Hamburger Icon Button -->
+          <button
+            id="hamburgerBtn"
+            class="bg-transparent border rounded-full ml-4 p-2"
+          >
+            <svg
+              class="fill-gray-400 w-4 h-4"
+              focusable="false"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              data-testid="CloseIcon"
+            >
+              <path
+                d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- Search Icon Button -->
+          <button
+            id="searchIcon"
+            class="bg-transparent border rounded-full p-2"
+          >
+            <svg
+              class="text-lg w-4 h-4 fill-gray-400"
+              focusable="false"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              data-testid="SearchIcon"
+            >
+              <path
+                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- Mobile Menu -->
+          <ul
+            id="mobileMenu"
+            class="flex flex-col mx-auto items-center absolute z-10 bg-white ml-0 h-screen mt-20 w-screen"
+          >
+            <li
+              class="text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+            >
+              <a href="/">Home</a>
+            </li>
+            <li
+              class="before:w-full text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+            >
+              <a href="/about">About</a>
+            </li>
+            <li
+              class="false text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+            >
+              <a href="/about#services">Services</a>
+            </li>
+            <li
+              class="false text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+            >
+              <a href="/pricing">Pricing</a>
+            </li>
+            <li
+              class="false text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+            >
+              <a href="/contact">Contact</a>
+            </li>
+            <li
+              class="false text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+            >
+              <a href="/blog">Blog</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Login Button -->
+        <a
+          href="/auth/login"
+          class="bg-[#D10A22] z-10 hover:bg-red-800 text-white rounded-3xl flex px-4 py-2 sm:px-6 sm:py-3 text-xs sm:text-sm font-bold"
+        >
+          <svg
+            class="w-4 h-4 mr-2 fill-white text-base"
+            focusable="false"
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+            data-testid="HttpsOutlinedIcon"
+          >
+            <path
+              d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"
+            ></path>
+          </svg>
+          Login
+        </a>
+
+        <!-- DataWell Logo on small screens -->
+        <a href="/">
+          <img
+            alt="The Data Well Logo"
+            loading="lazy"
+            width="1288"
+            height="1288"
+            decoding="async"
+            data-nimg="1"
+            class="w-16 lg:hidden mr-4"
+            src="/images/The Data Well logo oppo.png"
+          />
+        </a>
+      </div>
+
+      <hr class="border-red-600" />
+      <input
+        id="searchInput"
+        class="hidden text-base border-b-2 border-gray-300 outline-none focus:outline-none transition-width w-full px-4 py-2 pl-10"
+        placeholder="Search"
+        type="search"
+      />
+
+      <div
+        class="relative text-white lg:w-full hidden lg:block z-[999999999999999]"
+      >
+        <a href="/layout/">
+          <img
+            src="../images//The Data Well logo oppo.png"
+            alt="The Data Well Logo"
+            loading="lazy"
+            width="1288"
+            height="1288"
+            decoding="async"
+            data-nimg="1"
+            class="absolute z-[999999999999999] w-24 xl:w-32 right-[16px] top-[30px] lg:block hidden animate__animated animate__fadeInDown"
+            style="color: transparent"
+          />
+        </a>
+
+        <div
+          class="absolute bg-[#D10A22] top-0 left-0 -z-[1] lg:block h-[72px] lg:w-[70%] xl:w-[60%] 2xl:w-[50%]"
+        ></div>
+        <ul class="space-x-8 flex text-white">
+          <li
+            class="before:w-full ml-20 text-neutral-50 hover:text-white before:bg-white py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+          >
+            <a href="/">Home</a>
+          </li>
+          <li
+            class="false text-neutral-50 hover:text-white before:bg-white py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+          >
+            <a href="/">About</a>
+          </li>
+          <li
+            class="false text-neutral-50 hover:text-white before:bg-white py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+          >
+            <a href="/">Services</a>
+          </li>
+          <li
+            class="false text-neutral-50 hover:text-white before:bg-white py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+          >
+            <a href="/">Pricing</a>
+          </li>
+          <li
+            class="false text-neutral-50 hover:text-white before:bg-white py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+          >
+            <a href="/">Contact</a>
+          </li>
+          <li
+            class="false text-neutral-50 hover:text-white before:bg-white py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+          >
+            <a href="/">Blog</a>
+          </li>
+
+          <li>
+            <button
+              class="text-white my-6 ml-4"
+              id="lgSearchIcon"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                width="24px"
+                height="24px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+              <span class="MuiTouchRipple-root css-w0pj6f"></span>
+            </button>
+          </li>
+
+          <li
+            class="relative px-16 py-6 space-x-2 font-bold tracking-wide cursor-pointer loginLi center"
+          >
+            <a href="/auth/login" class="flex flex-row items-center">
+              <div
+                class="absolute h-full w-full top-0 left-0 -z-[1] transform -skew-x-[27deg] bg-[#A0081A] logindiv transition-colors duration-500"
+              ></div>
+              <div class="flex flex-col"></div>
+              <svg
+                class="w-4 h-4 mr-2 fill-white text-base"
+                focusable="false"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                data-testid="HttpsOutlinedIcon"
+              >
+                <path
+                  d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"
+                ></path>
+              </svg>
+              <span>Login</span>
+              <svg
+                class="w-6 h-6 mr-2 fill-white"
+                focusable="false"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                data-testid="NavigateNextRoundedIcon"
+              >
+                <path
+                  d="M9.31 6.71c-.39.39-.39 1.02 0 1.41L13.19 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.72 6.7c-.38-.38-1.02-.38-1.41.01z"
+                ></path>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        id="lgSearchInput"
+        class="hidden h-[88px] absolute w-[796px] bg-gray-100 transition-height overflow-hidden text-gray-900 left-16 z-[9999999999999999999999999] shadow-md"
+      >
+        <input
+          class="text-base border-none outline-none focus:outline-none transition-width w-full px-4 py-8"
+          placeholder="Search"
+          type="search"
+        />
+      </div>
+    </nav>
+
+    <section
+      class="flex container mx-auto px-4 md:px-0 justify-center bg-gray-100 h-60 lg:h-96"
+    >
+      <div class="h-full flex flex-col justify-center items-center">
         <div class="space-y-2 text-center lg:space-y-4 w-fit col-center">
           <h2
             class="font-sans text-3xl font-bold text-gray-800 lg:text-5xl md:text-4xl animate-fadeInDown"
@@ -16,7 +281,7 @@
             About Us
           </h2>
           <p
-            class="w-10/12 text-sm text-gray-500 md:text-base lg:text-lg center animate-fadeInDown"
+            class="text-sm text-gray-500 md:text-base lg:text-lg center animate-fadeInDown"
           >
             Trustworthy experience, dependable service.
           </p>
@@ -24,7 +289,7 @@
         <div class="mt-4 space-x-2 lg:mt-8 center animate-fadeInDown">
           <a href="/auth/signup">
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium px-4 py-2 lg:px-10 lg:py-4 text-xs lg:text-sm font-bold text-white bg-primary rounded lg:rounded-lg normal-case hover:bg-[#A0081A] css-1ujsas3"
+              class="px-4 py-2 lg:px-10 lg:py-4 text-xs lg:text-sm font-bold text-white bg-[#D10A22] rounded lg:rounded-lg normal-case hover:bg-[#A0081A] css-1ujsas3"
               tabindex="0"
               type="button"
             >
@@ -33,7 +298,7 @@
           </a>
           <a href="/auth/login">
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium px-4 py-2 lg:px-10 lg:py-4 text-xs lg:text-sm font-bold text-white bg-primary rounded lg:rounded-lg normal-case hover:bg-[#A0081A] css-1ujsas3"
+              class="px-4 py-2 lg:px-10 lg:py-4 text-xs lg:text-sm font-bold text-white bg-[#D10A22] rounded lg:rounded-lg normal-case hover:bg-[#A0081A] css-1ujsas3"
               tabindex="0"
               type="button"
             >
@@ -41,6 +306,226 @@
             </button>
           </a>
         </div>
+      </div>
+    </section>
+
+    <section
+      class="flex container mx-auto px-8 md:px-0 justify-center py-10 sm:py-14 md:py-16 lg:py-20 container_fluid center"
+    >
+      <div class="text-center md:w-10/12 xl:w-8/12">
+        <h6
+          class="text-lg font-bold text-gray-800 sm:text-xl md:text-2xl aos-init aos-animate"
+          data-aos="fade-up"
+          data-aos-once="true"
+          data-aos-duration="1000"
+        >
+          About our Company
+        </h6>
+        <p
+          class="mt-2 text-sm text-gray-500 sm:text-base md:text-lg lg:mt-4 aos-init aos-animate"
+          data-aos="fade-up"
+          data-aos-once="true"
+          data-aos-duration="1000"
+        >
+          Welcome to Datawellng, your one-stop shop for all your retailing data,
+          airtime, bills payment and conversion of airtime to cash needs. Our
+          platform offers you a hassle-free and affordable way to stay connected
+          and handle your bills payments online.
+        </p>
+        <section class="pt-14 md:pt-20 2xl:pt-32 undefined" id="services">
+          <div class="text-center col-center">
+            <h6
+              data-aos="fade-up"
+              data-aos-once="true"
+              data-aos-duration="1000"
+              class="font-bold text-gray-800 text-lg sm:text-xl md:text-2xl aos-init aos-animate"
+            >
+              Our Services
+            </h6>
+            <p
+              data-aos="fade-up"
+              data-aos-once="true"
+              data-aos-duration="1000"
+              class="text-sm sm:text-base md:text-lg text-gray-500 undefined aos-init aos-animate"
+            >
+              Here are some of the services we offer
+            </p>
+          </div>
+          <div
+            class="grid sm:grid-cols-2 gap-10 sm:gap-14 md:gap-16 lg:gap-20 mt-10 sm:mt-14 md:mt-16 lg:mt-20"
+          >
+            <div
+              class="flex flex-col items-center md:flex md:flex-row md:w-full md:space-x-8 aos-init aos-animate"
+              data-aos="fade-up"
+              data-aos-once="true"
+              data-aos-duration="1000"
+            >
+              <div class="rounded-full bg-[#D10A22] p-8 relative w-16 h-16">
+                <img
+                  alt="Data Purchase"
+                  loading="lazy"
+                  decoding="async"
+                  data-nimg="fill"
+                  class="p-2"
+                  src="../svg/Data Bundle Icon.svg"
+                  style="
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    inset: 0px;
+                    color: transparent;
+                  "
+                />
+              </div>
+
+              <div class="mt-4 text-center lg:text-left w-fit lg:mt-4 xl:mt-0">
+                <h6
+                  class="font-bold tracking-wide text-gray-800 text-base lg:text-sm"
+                >
+                  Data Purchase
+                </h6>
+
+                <p class="text-gray-500 text-base md:text-sm mt-1 md:mt-2">
+                  We offer affordable data plans for all major networks in
+                  Nigeria. Stay connected to the internet with our fast and
+                  reliable data plans, starting from as low as ₦50.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col items-center md:flex md:flex-row md:w-full md:space-x-8 aos-init aos-animate"
+              data-aos="fade-up"
+              data-aos-once="true"
+              data-aos-duration="1000"
+            >
+              <div class="rounded-full bg-[#D10A22] p-8 relative w-16 h-16">
+                <img
+                  alt="Airtime Purchase"
+                  loading="lazy"
+                  decoding="async"
+                  data-nimg="fill"
+                  class="p-2"
+                  src="../svg/Airtime Purchase.svg"
+                  style="
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    inset: 0px;
+                    color: transparent;
+                  "
+                />
+              </div>
+
+              <div class="mt-4 text-center lg:text-left w-fit lg:mt-4 xl:mt-0">
+                <h6
+                  class="font-bold tracking-wide text-gray-800 text-base lg:text-sm"
+                >
+                  Airtime Purchase
+                </h6>
+
+                <p class="text-gray-500 text-base md:text-sm mt-1 md:mt-2">
+                  Top up your mobile phone easily and conveniently on our
+                  platform. We offer instant airtime recharge for all networks
+                  in Nigeria at a discounted rate.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col items-center md:flex md:flex-row md:w-full md:space-x-8 aos-init aos-animate"
+              data-aos="fade-up"
+              data-aos-once="true"
+              data-aos-duration="1000"
+            >
+              <div class="rounded-full bg-[#D10A22] p-8 relative w-16 h-16">
+                <img
+                  alt="Bills Payment"
+                  loading="lazy"
+                  decoding="async"
+                  data-nimg="fill"
+                  class="p-2"
+                  src="../svg/bills payment.svg"
+                  style="
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    inset: 0px;
+                    color: transparent;
+                  "
+                />
+              </div>
+
+              <div class="mt-4 text-center lg:text-left w-fit lg:mt-4 xl:mt-0">
+                <h6
+                  class="font-bold tracking-wide text-gray-800 text-base lg:text-sm"
+                >
+                  Bills Payment
+                </h6>
+
+                <p class="text-gray-500 text-base md:text-sm mt-1 md:mt-2">
+                  Say goodbye to long queues and delays when it comes to bills
+                  payment. You can now pay your electricity bills, cable TV
+                  bills, and other utility bills on our platform, with just a
+                  few clicks.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col items-center md:flex md:flex-row md:w-full md:space-x-8 aos-init aos-animate"
+              data-aos="fade-up"
+              data-aos-once="true"
+              data-aos-duration="1000"
+            >
+              <div class="rounded-full bg-[#D10A22] p-8 relative w-16 h-16">
+                <img
+                  alt="Airtime to Cash Conversion"
+                  loading="lazy"
+                  decoding="async"
+                  data-nimg="fill"
+                  class="p-2"
+                  src="../svg/Airtime to Cash icon.svg"
+                  style="
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    inset: 0px;
+                    color: transparent;
+                  "
+                />
+              </div>
+
+              <div class="mt-4 text-center lg:text-left w-fit lg:mt-4 xl:mt-0">
+                <h6
+                  class="font-bold tracking-wide text-gray-800 text-base lg:text-sm"
+                >
+                  Airtime to Cash Conversion
+                </h6>
+
+                <p class="text-gray-500 text-base md:text-sm mt-1 md:mt-2">
+                  Do you have excess airtime that you want to convert to cash?
+                  Look no further, as our platform offers a seamless and
+                  affordable way to convert airtime to cash. Get instant cash in
+                  your bank account in no time.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <p
+          class="mt-10 text-sm text-gray-500 sm:mt-14 md:mt-16 lg:mt-20 sm:text-base md:text-lg aos-init aos-animate"
+          data-aos="fade-up"
+          data-aos-once="true"
+          data-aos-duration="1000"
+        >
+          At Datawellng, we prioritize the satisfaction of our customers. We are
+          trustworthy and transparent, ensuring that all transactions are
+          carried out safely and securely. Our platform is user-friendly and
+          easy to navigate, making it easy for you to complete your transactions
+          with ease.Stay connected, pay bills, and convert airtime to cash
+          effortlessly with Datawellng.
+        </p>
       </div>
     </section>
 
@@ -73,5 +558,6 @@
         animateElements();
       });
     </script>
+    <script src="./app.js"></script>
   </body>
 </html>
