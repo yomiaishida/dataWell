@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
     <link rel="stylesheet" href="./css//styles.css" />
+    <link
+      href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
+      rel="stylesheet"
+    />
+
     <title>Document</title>
   </head>
   <body class="">
@@ -11,13 +17,14 @@
       <!-- Mobile -->
 
       <div
-        class="lg:hidden flex items-center container mx-auto px-4 py-4 justify-between"
+        class="lg:hidden flex items-center container mx-auto py-4 justify-between"
+        id="menuItems"
       >
-        <div class="space-x-4">
+        <div class="space-x-4 relative">
           <!-- Hamburger Icon Button -->
           <button
             id="hamburgerBtn"
-            class="bg-transparent border rounded-full p-2"
+            class="bg-transparent border rounded-full ml-4 p-2"
           >
             <svg
               class="w-4 h-4 fill-gray-400"
@@ -31,7 +38,10 @@
           </button>
 
           <!-- Search Icon Button -->
-          <button id="searchBtn" class="bg-transparent border rounded-full p-2">
+          <button
+            id="searchIcon"
+            class="bg-transparent border rounded-full p-2"
+          >
             <svg
               class="text-lg w-4 h-4 fill-gray-400"
               focusable="false"
@@ -48,7 +58,7 @@
           <!-- Mobile Menu -->
           <ul
             id="mobileMenu"
-            class="flex flex-col items-center bg-white h-screen pt-[96px] col-center w-screen"
+            class="flex flex-col mx-auto items-center absolute z-10 bg-white h-screen mt-24 w-screen"
           >
             <li
               class="before:w-full text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
@@ -102,7 +112,7 @@
           Login
         </a>
 
-        <!-- Logo (replace the img tag with your actual logo) -->
+        <!-- DataWell Logo on small screens -->
         <a href="/">
           <img
             alt="The Data Well Logo"
@@ -111,13 +121,20 @@
             height="1288"
             decoding="async"
             data-nimg="1"
-            class="w-16 lg:hidden"
+            class="w-16 lg:hidden mr-4"
             src="/images/The Data Well logo oppo.png"
           />
         </a>
       </div>
 
-      <hr />
+      <hr class="border-red-600" />
+      <input
+        id="searchInput"
+        class="hidden text-base border-b-2 border-gray-300 outline-none focus:outline-none transition-width w-full px-4 py-2 pl-10"
+        placeholder="Search"
+        type="search"
+      />
+
       <div
         class="relative text-white lg:w-full hidden lg:block z-[999999999999999]"
       >
@@ -1105,89 +1122,8 @@
       <button class="slider-next">Next</button>
     </section>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const firstButton = document.getElementById("firstButton");
-        const secondButton = document.getElementById("secondButton");
-        const firstDiv = document.getElementById("firstDiv");
-        const secondDiv = document.getElementById("secondDiv");
-
-        // Show the second div and hide the first div
-        function showSecondDiv() {
-          firstDiv.classList.add("hidden");
-          firstButton.classList.remove("md:bg-red-500");
-          secondDiv.classList.remove("hidden");
-          firstButton.classList.add("md:bg-red-200");
-          secondButton.classList.remove("md:bg-red-200");
-          secondButton.classList.add("md:bg-red-500");
-        }
-
-        // Show the first div and hide the second div
-        function showFirstDiv() {
-          firstDiv.classList.remove("hidden");
-          firstDiv.classList.remove("bg-red-200");
-          secondDiv.classList.add("hidden");
-          firstButton.classList.remove("md:bg-red-200");
-          secondButton.classList.remove("md:bg-red-500");
-          firstButton.classList.add("md:bg-red-500");
-          secondButton.classList.add("md:bg-red-200");
-        }
-
-        // Add click event listeners to the pagination buttons
-        firstButton.addEventListener("click", showFirstDiv);
-        secondButton.addEventListener("click", showSecondDiv);
-      });
-
-      const hamburgerBtn = document.getElementById("hamburgerBtn");
-      const mobileMenu = document.getElementById("mobileMenu");
-
-      hamburgerBtn.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const sliderContainer = document.querySelector(".slider-container");
-        const sliderTrack = document.querySelector(".slider-track");
-        const sliderItems = document.querySelectorAll(".slider-item");
-        const prevButton = document.querySelector(".slider-prev");
-        const nextButton = document.querySelector(".slider-next");
-        const slideWidth = sliderItems[0].clientWidth;
-        const numVisibleSlides = 4; // Change this value to set the number of visible slides
-        let currentPosition = 0;
-
-        // Move the slider track to the specified position
-        function moveToPosition(position) {
-          sliderTrack.style.transform = `translateX(${position}px)`;
-        }
-
-        // Move the slider to the next slide
-        function nextSlide() {
-          currentPosition -= slideWidth;
-          if (
-            currentPosition <
-            -(slideWidth * (sliderItems.length - numVisibleSlides))
-          ) {
-            currentPosition = 0;
-          }
-          moveToPosition(currentPosition);
-        }
-
-        // Move the slider to the previous slide
-        function prevSlide() {
-          currentPosition += slideWidth;
-          if (currentPosition > 0) {
-            currentPosition = -(
-              slideWidth *
-              (sliderItems.length - numVisibleSlides)
-            );
-          }
-          moveToPosition(currentPosition);
-        }
-
-        // Attach click event listeners to the buttons
-        prevButton.addEventListener("click", prevSlide);
-        nextButton.addEventListener("click", nextSlide);
-      });
-    </script>
+    <script src="./app.js"></script>
+    <script src="../bower_components/aos/dist/aos.js"></script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
   </body>
 </html>

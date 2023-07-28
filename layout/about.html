@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="bg-gray-100 h-60 lg:h-96">
+      <div class="h-full container_fluid col-center">
+        <div class="space-y-2 text-center lg:space-y-4 w-fit col-center">
+          <h2
+            class="font-sans text-3xl font-bold text-gray-800 lg:text-5xl md:text-4xl animate-fadeInDown"
+          >
+            About Us
+          </h2>
+          <p
+            class="w-10/12 text-sm text-gray-500 md:text-base lg:text-lg center animate-fadeInDown"
+          >
+            Trustworthy experience, dependable service.
+          </p>
+        </div>
+        <div class="mt-4 space-x-2 lg:mt-8 center animate-fadeInDown">
+          <a href="/auth/signup">
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium px-4 py-2 lg:px-10 lg:py-4 text-xs lg:text-sm font-bold text-white bg-primary rounded lg:rounded-lg normal-case hover:bg-[#A0081A] css-1ujsas3"
+              tabindex="0"
+              type="button"
+            >
+              Get Started<span class="MuiTouchRipple-root css-w0pj6f"></span>
+            </button>
+          </a>
+          <a href="/auth/login">
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium px-4 py-2 lg:px-10 lg:py-4 text-xs lg:text-sm font-bold text-white bg-primary rounded lg:rounded-lg normal-case hover:bg-[#A0081A] css-1ujsas3"
+              tabindex="0"
+              type="button"
+            >
+              Login<span class="MuiTouchRipple-root css-w0pj6f"></span>
+            </button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Function to add animate__fadeInDown class to elements when they appear in the viewport
+      function animateElements() {
+        const elements = document.querySelectorAll(".animate__animated");
+
+        elements.forEach((element) => {
+          const rect = element.getBoundingClientRect();
+          const viewHeight = Math.max(
+            document.documentElement.clientHeight,
+            window.innerHeight
+          );
+          const isInViewport = rect.top <= viewHeight;
+
+          if (isInViewport) {
+            element.classList.add("animate__fadeInDown");
+          }
+        });
+      }
+
+      // Check if elements are in viewport on page load
+      document.addEventListener("DOMContentLoaded", () => {
+        animateElements();
+      });
+
+      // Check if elements are in viewport on scroll
+      window.addEventListener("scroll", () => {
+        animateElements();
+      });
+    </script>
+  </body>
+</html>
