@@ -12,7 +12,5 @@
   "devDependencies": {
     "tailwindcss": "^3.3.3"
   },
-  "dependencies": {
-    "aos": "^2.3.4"
-  }
+  "dependencies": {}
 }
