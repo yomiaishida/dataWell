@@ -68,20 +68,20 @@
             <li
               class="text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
             >
-              <a href="/about">About</a>
+              <a href="/about.html">About</a>
             </li>
             <li
               class="false text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
             >
-              <a href="./layout/about#services">Services</a>
+              <a href="./about#services">Services</a>
             </li>
             <li
-              class="false text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+              class="before:w-full text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
             >
               <a href="/pricing">Pricing</a>
             </li>
             <li
-              class="before:w-full text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+              class="text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
             >
               <a href="/contact">Contact</a>
             </li>
@@ -95,7 +95,7 @@
 
         <!-- Login Button -->
         <a
-          href="/auth/login"
+          href="./login.html"
           class="bg-[#D10A22] z-10 hover:bg-red-800 text-white rounded-3xl flex px-4 py-2 sm:px-6 sm:py-3 text-xs sm:text-sm font-bold"
         >
           <svg
@@ -157,7 +157,7 @@
         ></div>
         <ul class="space-x-8 flex text-white">
           <li
-            class="before:w-full ml-20 text-neutral-50 hover:text-white before:bg-white py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+            class="ml-20 text-neutral-50 hover:text-white before:bg-white py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
           >
             <a href="/">Home</a>
           </li>
@@ -169,17 +169,17 @@
           <li
             class="false text-neutral-50 hover:text-white before:bg-white py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
           >
-            <a href="/">Services</a>
+            <a href="/about.html#services">Services</a>
+          </li>
+          <li
+            class="before:w-full text-neutral-50 hover:text-white before:bg-white py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+          >
+            <a href="/pricing.html">Pricing</a>
           </li>
           <li
             class="false text-neutral-50 hover:text-white before:bg-white py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
           >
-            <a href="/">Pricing</a>
-          </li>
-          <li
-            class="false text-neutral-50 hover:text-white before:bg-white py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
-          >
-            <a href="/">Contact</a>
+            <a href="/contact.html">Contact</a>
           </li>
           <li
             class="false text-neutral-50 hover:text-white before:bg-white py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
@@ -226,7 +226,7 @@
           <li
             class="relative px-16 py-6 space-x-2 font-bold tracking-wide cursor-pointer loginLi center"
           >
-            <a href="/auth/login" class="flex flex-row items-center">
+            <a href="./login.html" class="flex flex-row items-center">
               <div
                 class="absolute h-full w-full top-0 left-0 -z-[1] transform -skew-x-[27deg] bg-[#A0081A] logindiv transition-colors duration-500"
               ></div>
@@ -277,18 +277,19 @@
       <div class="h-full flex flex-col justify-center items-center">
         <div class="space-y-2 text-center lg:space-y-4 w-fit col-center">
           <h2
-            class="font-sans text-3xl font-bold text-gray-800 lg:text-5xl md:text-4xl animate-fadeInDown"
+            data-aos="animate-fadeInDown"
+            data-aos-duration="1000"
+            data-aos-once="true"
+            class="font-sans text-3xl font-bold text-gray-800 lg:text-5xl md:text-4xl"
           >
             Pricing
           </h2>
-          <p
-            class="text-sm text-gray-500 md:text-base lg:text-lg center animate-fadeInDown"
-          >
+          <p class="text-sm text-gray-500 md:text-base lg:text-lg center">
             Trustworthy experience, dependable service.
           </p>
         </div>
-        <div class="mt-4 space-x-2 lg:mt-8 center animate-fadeInDown">
-          <a href="/auth/signup">
+        <div class="mt-4 space-x-2 lg:mt-8 center">
+          <a href="./signup.html">
             <button
               class="px-4 py-2 lg:px-10 lg:py-4 text-xs lg:text-sm font-bold text-white bg-[#D10A22] rounded lg:rounded-lg normal-case hover:bg-[#A0081A] css-1ujsas3"
               tabindex="0"
@@ -297,13 +298,13 @@
               Get Started<span class="MuiTouchRipple-root css-w0pj6f"></span>
             </button>
           </a>
-          <a href="/auth/login">
+          <a href="./login.html">
             <button
-              class="px-4 py-2 lg:px-10 lg:py-4 text-xs lg:text-sm font-bold text-white bg-[#D10A22] rounded lg:rounded-lg normal-case hover:bg-[#A0081A] css-1ujsas3"
+              class="px-4 py-2 lg:px-10 lg:py-4 text-xs lg:text-sm font-bold text-white bg-[#D10A22] rounded lg:rounded-lg normal-case hover:bg-[#A0081A]"
               tabindex="0"
               type="button"
             >
-              Login<span class="MuiTouchRipple-root css-w0pj6f"></span>
+              Login<span class=""></span>
             </button>
           </a>
         </div>
@@ -319,7 +320,7 @@
             data-aos="fade-up"
             data-aos-once="true"
             data-aos-duration="1000"
-            class="text-xl font-bold text-center text-gray-800 sm:text-2xl xl:text-4xl md:text-3xl lg:text-left aos-init aos-animate"
+            class="text-xl font-bold text-center text-gray-800 sm:text-2xl xl:text-4xl md:text-3xl lg:text-left"
           >
             Data Pricing
           </h1>
@@ -330,7 +331,7 @@
               data-aos="fade-up"
               data-aos-once="true"
               data-aos-duration="1000"
-              class="p-8 lg:p-12 bg-white h-fit rounded-lg shadow-md lg:shadow-xl lg:min-w-[310px] xl:min-w-[370px] col-center aos-init aos-animate"
+              class="p-8 lg:p-12 bg-white h-fit rounded-lg shadow-md lg:shadow-xl lg:min-w-[310px] xl:min-w-[370px] col-center"
             >
               <img
                 alt="Glo"
@@ -342,14 +343,14 @@
                 height="128"
                 decoding="async"
                 data-nimg="1"
-                class="object-contain mx-auto w-20 h-20 rounded-full md:h-24 md:w-24 lg:w-32 lg:h-32 bg-gray-50 aos-init aos-animate"
+                class="object-contain mx-auto w-20 h-20 rounded-full md:h-24 md:w-24 lg:w-32 lg:h-32 bg-gray-50"
                 src="../images/globacom.png"
               />
               <p
                 data-aos="fade-up"
                 data-aos-once="true"
                 data-aos-duration="1000"
-                class="mt-1 text-sm text-center font-bold md:text-base lg:mt-2 aos-init aos-animate"
+                class="mt-1 text-sm text-center font-bold md:text-base lg:mt-2"
               >
                 Glo
               </p>
@@ -358,7 +359,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-center lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-center lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">3.9GB</span
                   ><span class="text-gray-500">=&gt;</span
@@ -368,7 +369,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-center lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-center lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">20GB</span
                   ><span class="text-gray-500">=&gt;</span
@@ -378,7 +379,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-center lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-center lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">26GB</span
                   ><span class="text-gray-500">=&gt;</span
@@ -388,7 +389,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-center lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-center lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">42GB</span
                   ><span class="text-gray-500">=&gt;</span
@@ -400,7 +401,7 @@
               data-aos="fade-up"
               data-aos-once="true"
               data-aos-duration="1000"
-              class="p-8 lg:p-12 bg-white h-fit rounded-lg shadow-md lg:shadow-xl lg:min-w-[310px] xl:min-w-[370px] col-center aos-init aos-animate"
+              class="p-8 lg:p-12 bg-white h-fit rounded-lg shadow-md lg:shadow-xl lg:min-w-[310px] xl:min-w-[370px] col-center"
             >
               <img
                 alt="MTN"
@@ -412,14 +413,14 @@
                 height="128"
                 decoding="async"
                 data-nimg="1"
-                class="object-contain mx-auto w-20 h-20 rounded-full md:h-24 md:w-24 lg:w-32 lg:h-32 bg-gray-50 aos-init aos-animate"
+                class="object-contain mx-auto w-20 h-20 rounded-full md:h-24 md:w-24 lg:w-32 lg:h-32 bg-gray-50"
                 src="/images/mtn.png"
               />
               <p
                 data-aos="fade-up"
                 data-aos-once="true"
                 data-aos-duration="1000"
-                class="mt-1 text-sm text-center font-bold md:text-base lg:mt-2 aos-init aos-animate"
+                class="mt-1 text-sm text-center font-bold md:text-base lg:mt-2"
               >
                 MTN
               </p>
@@ -428,7 +429,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">500MB</span
                   ><span class="text-gray-500">=&gt;</span
@@ -438,7 +439,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">1GB</span
                   ><span class="text-gray-500">=&gt;</span
@@ -448,7 +449,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">2GB</span
                   ><span class="text-gray-500">=&gt;</span
@@ -458,7 +459,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">5GB</span
                   ><span class="text-gray-500">=&gt;</span
@@ -468,7 +469,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">10GB</span
                   ><span class="text-gray-500">=&gt;</span
@@ -480,7 +481,7 @@
               data-aos="fade-up"
               data-aos-once="true"
               data-aos-duration="1000"
-              class="p-8 lg:p-12 bg-white h-fit rounded-lg shadow-md lg:shadow-xl lg:min-w-[310px] xl:min-w-[370px] col-center aos-init aos-animate"
+              class="p-8 lg:p-12 bg-white h-fit rounded-lg shadow-md lg:shadow-xl lg:min-w-[310px] xl:min-w-[370px] col-center"
             >
               <img
                 alt="9Mobile"
@@ -492,14 +493,14 @@
                 height="128"
                 decoding="async"
                 data-nimg="1"
-                class="object-contain mx-auto w-20 h-20 rounded-full md:h-24 md:w-24 lg:w-32 lg:h-32 bg-gray-50 aos-init aos-animate"
+                class="object-contain mx-auto w-20 h-20 rounded-full md:h-24 md:w-24 lg:w-32 lg:h-32 bg-gray-50"
                 src="/images/9mobile.png"
               />
               <p
                 data-aos="fade-up"
                 data-aos-once="true"
                 data-aos-duration="1000"
-                class="mt-1 text-center text-sm font-bold md:text-base lg:mt-2 aos-init aos-animate"
+                class="mt-1 text-center text-sm font-bold md:text-base lg:mt-2"
               >
                 9Mobile
               </p>
@@ -508,7 +509,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">500MB</span
                   ><span class="text-gray-500">=&gt;</span
@@ -518,7 +519,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">1.536GB</span
                   ><span class="text-gray-500">=&gt;</span
@@ -528,7 +529,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">2.048GB</span
                   ><span class="text-gray-500">=&gt;</span
@@ -538,7 +539,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">3.072GB</span
                   ><span class="text-gray-500">=&gt;</span
@@ -548,7 +549,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">4.608GB</span
                   ><span class="text-gray-500">=&gt;</span
@@ -558,7 +559,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">11.264GB</span
                   ><span class="text-gray-500">=&gt;</span
@@ -568,7 +569,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">15.36GB</span
                   ><span class="text-gray-500">=&gt;</span
@@ -578,7 +579,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">40.96GB</span
                   ><span class="text-gray-500">=&gt;</span
@@ -588,7 +589,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">76.8GB</span
                   ><span class="text-gray-500">=&gt;</span
@@ -603,7 +604,7 @@
             data-aos="fade-up"
             data-aos-once="true"
             data-aos-duration="1000"
-            class="text-xl font-bold text-center text-gray-800 sm:text-2xl xl:text-4xl md:text-3xl lg:text-left aos-init aos-animate"
+            class="text-xl font-bold text-center text-gray-800 sm:text-2xl xl:text-4xl md:text-3xl lg:text-left"
           >
             Other Pricing
           </h1>
@@ -614,13 +615,13 @@
               data-aos="fade-up"
               data-aos-once="true"
               data-aos-duration="1000"
-              class="w-full aos-init aos-animate"
+              class="w-full"
             >
               <h6
                 data-aos="fade-up"
                 data-aos-once="true"
                 data-aos-duration="1000"
-                class="w-full px-4 py-4 flex justify-between text-sm font-bold text-gray-500 md:text-base bg-gray-50 inline-between aos-init aos-animate"
+                class="w-full px-4 py-4 flex justify-between text-sm font-bold text-gray-500 md:text-base bg-gray-50 inline-between"
               >
                 <span>Bill Payments</span><span>Discount</span>
               </h6>
@@ -629,7 +630,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">DSTV</span
                   ><span class="font-bold text-gray-800">1%</span>
@@ -638,7 +639,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">GOTV</span
                   ><span class="font-bold text-gray-800">1%</span>
@@ -647,7 +648,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">STARTIMES</span
                   ><span class="font-bold text-gray-800">1.5%</span>
@@ -656,7 +657,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">SMILE RECHARGE</span
                   ><span class="font-bold text-gray-800">2%</span>
@@ -665,7 +666,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">SPECTRANET</span
                   ><span class="font-bold text-gray-800">2.5%</span>
@@ -676,13 +677,13 @@
               data-aos="fade-up"
               data-aos-once="true"
               data-aos-duration="1000"
-              class="w-full aos-init aos-animate"
+              class="w-full"
             >
               <h6
                 data-aos="fade-up"
                 data-aos-once="true"
                 data-aos-duration="1000"
-                class="w-full px-4 py-4 text-sm font-bold text-gray-500 md:text-base bg-gray-50 inline-between aos-init aos-animate"
+                class="w-full px-4 py-4 text-sm font-bold text-gray-500 md:text-base bg-gray-50 inline-between"
               >
                 <span>Airtime Discounts</span><span>Discount</span>
               </h6>
@@ -691,7 +692,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">MTN</span
                   ><span class="font-bold text-gray-800">2%</span>
@@ -700,7 +701,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">MTN - PREMIUM</span
                   ><span class="font-bold text-gray-800">3%</span>
@@ -709,7 +710,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">AIRTEL</span
                   ><span class="font-bold text-gray-800">3%</span>
@@ -718,7 +719,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">9MOBILE</span
                   ><span class="font-bold text-gray-800">4%</span>
@@ -727,7 +728,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">9MOBILE - PREMIUM</span
                   ><span class="font-bold text-gray-800">5%</span>
@@ -736,7 +737,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">GLO</span
                   ><span class="font-bold text-gray-800">5%</span>
@@ -745,7 +746,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">GLO - PREMIUM</span
                   ><span class="font-bold text-gray-800">7%</span>
@@ -754,7 +755,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">VISAPHONE</span
                   ><span class="font-bold text-gray-800">5%</span>
@@ -767,13 +768,13 @@
               data-aos="fade-up"
               data-aos-once="true"
               data-aos-duration="1000"
-              class="w-full aos-init aos-animate"
+              class="w-full"
             >
               <h6
                 data-aos="fade-up"
                 data-aos-once="true"
                 data-aos-duration="1000"
-                class="w-full px-4 py-4 text-sm flex justify-between font-bold text-gray-500 md:text-base bg-gray-50 inline-between aos-init aos-animate"
+                class="w-full px-4 py-4 text-sm flex justify-between font-bold text-gray-500 md:text-base bg-gray-50 inline-between"
               >
                 <span>Airtime to Cash</span><span>Rate</span>
               </h6>
@@ -782,7 +783,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">MTN</span
                   ><span class="font-bold text-gray-800">85%</span>
@@ -791,7 +792,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">GLO</span
                   ><span class="font-bold text-gray-800">75%</span>
@@ -800,7 +801,7 @@
                   data-aos="fade-up"
                   data-aos-once="true"
                   data-aos-duration="1000"
-                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base aos-init aos-animate"
+                  class="space-x-4 text-sm flex justify-between lg:space-x-8 between md:text-base"
                 >
                   <span class="text-gray-500">9MOBILE</span
                   ><span class="font-bold text-gray-800">80%</span>
@@ -915,6 +916,10 @@
       </div>
     </footer>
 
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="./app.js"></script>
   </body>
 </html>

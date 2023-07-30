@@ -76,26 +76,26 @@
               <a href="#services">Services</a>
             </li>
             <li
-              class="false text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+              class="text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
             >
               <a href="/pricing">Pricing</a>
             </li>
             <li
-              class="false text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+              class="text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
             >
               <a href="/contact">Contact</a>
             </li>
             <li
               class="before:w-full text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
             >
-              <a href="/blog">Blog</a>
+              <a href="./blog.html">Blog</a>
             </li>
           </ul>
         </div>
 
         <!-- Login Button -->
         <a
-          href="/auth/login"
+          href="../login.html"
           class="bg-[#D10A22] z-10 hover:bg-red-800 text-white rounded-3xl flex px-4 py-2 sm:px-6 sm:py-3 text-xs sm:text-sm font-bold"
         >
           <svg
@@ -162,22 +162,22 @@
             <a href="/">Home</a>
           </li>
           <li
-            class="false text-neutral-50 hover:text-white before:bg-white py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+            class="text-neutral-50 hover:text-white before:bg-white py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
           >
             <a href="/about.html">About</a>
           </li>
           <li
-            class="false text-neutral-50 hover:text-white before:bg-white py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+            class="text-neutral-50 hover:text-white before:bg-white py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
           >
             <a href="#services">Services</a>
           </li>
           <li
-            class="false text-neutral-50 hover:text-white before:bg-white py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+            class="text-neutral-50 hover:text-white before:bg-white py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
           >
             <a href="/pricing.html">Pricing</a>
           </li>
           <li
-            class="false text-neutral-50 hover:text-white before:bg-white py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+            class="text-neutral-50 hover:text-white before:bg-white py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
           >
             <a href="/contact.html">Contact</a>
           </li>
@@ -219,7 +219,6 @@
                   />
                 </g>
               </svg>
-              <span class="MuiTouchRipple-root css-w0pj6f"></span>
             </button>
           </li>
 
@@ -273,8 +272,9 @@
     <section
       class="container sm:px-20 p-8 mx-auto my-10 prose-sm prose text-gray-600 md:my-14 lg:my-20 md:prose-base lg:prose-lg xl:prose-xl 2xl:prose-2xl"
     >
-      <button
-        class="text-gray-900 normal-case flex justify-center items-center"
+      <a
+        href="./blog.html"
+        class="text-start text-gray-900 normal-case flex justify-start mb-4 items-center"
         tabindex="0"
         type="button"
       >
@@ -289,7 +289,7 @@
             <path
               d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21z"
             ></path></svg></span
-        >Back<span class="MuiTouchRipple-root css-w0pj6f"></span></button
+        >Back</a
       ><img
         alt="Cheaper Data Bundle now available for University Students"
         loading="lazy"
@@ -442,6 +442,10 @@
       </div>
     </footer>
 
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="../app.js"></script>
   </body>
 </html>
