@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const secondButton = document.getElementById("secondButton");
   const firstDiv = document.getElementById("firstDiv");
   const secondDiv = document.getElementById("secondDiv");
+  let showFirst = true;
 
   // Show the second div and hide the first div
   function showSecondDiv() {
@@ -12,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     firstButton.classList.add("md:bg-red-200");
     secondButton.classList.remove("md:bg-red-200");
     secondButton.classList.add("md:bg-red-500");
+    showFirst = false;
   }
 
   // Show the first div and hide the second div
@@ -23,11 +25,24 @@ document.addEventListener("DOMContentLoaded", function () {
     secondButton.classList.remove("md:bg-red-500");
     firstButton.classList.add("md:bg-red-500");
     secondButton.classList.add("md:bg-red-200");
+    showFirst = true;
   }
 
   // Add click event listeners to the pagination buttons
   firstButton.addEventListener("click", showFirstDiv);
   secondButton.addEventListener("click", showSecondDiv);
+
+  // Function to switch divs every 1000 milliseconds (1 second)
+  function switchDivs() {
+    if (showFirst) {
+      showSecondDiv();
+    } else {
+      showFirstDiv();
+    }
+  }
+
+  // Start the interval to switch divs
+  setInterval(switchDivs, 9000);
 });
 
 // show hamburger and search icon's svg
