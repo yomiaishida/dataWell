@@ -8,6 +8,11 @@
       href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="./node_modules/a11y-slider/dist/a11y-slider.css"
+    />
+    <script src="./node_modules/a11y-slider/dist/a11y-slider.js"></script>
     <title>About us | The Data Well Niegeria</title>
   </head>
   <body>
@@ -270,267 +275,277 @@
       </div>
     </nav>
 
-    <section
-      class="flex container mx-auto px-4 md:px-0 justify-center bg-gray-100 h-60 lg:h-96"
-    >
-      <div class="h-full flex flex-col justify-center items-center">
-        <div class="space-y-2 text-center lg:space-y-4 w-fit col-center">
-          <h2
-            data-aos="animate-fadeInDown"
-            class="font-sans text-3xl font-bold text-gray-800 lg:text-5xl md:text-4xl"
-          >
-            About Us
-          </h2>
-          <p class="text-sm text-gray-500 md:text-base lg:text-lg center">
-            Trustworthy experience, dependable service.
-          </p>
-        </div>
-        <div class="mt-4 space-x-2 lg:mt-8 center">
-          <a href="signup.html">
-            <button
-              class="px-4 py-2 lg:px-10 lg:py-4 text-xs lg:text-sm font-bold text-white bg-[#D10A22] rounded lg:rounded-lg normal-case hover:bg-[#A0081A]"
-              tabindex="0"
-              type="button"
+    <main id="main" class="hide-on-mobile-nav hidden">
+      <section
+        class="flex container mx-auto px-4 md:px-0 justify-center bg-gray-100 h-60 lg:h-96"
+      >
+        <div class="h-full flex flex-col justify-center items-center">
+          <div class="space-y-2 text-center lg:space-y-4 w-fit col-center">
+            <h2
+              data-aos="animate-fadeInDown"
+              class="font-sans text-3xl font-bold text-gray-800 lg:text-5xl md:text-4xl"
             >
-              Get Started
-            </button>
-          </a>
-          <a href="./login.html">
-            <button
-              class="px-4 py-2 lg:px-10 lg:py-4 text-xs lg:text-sm font-bold text-white bg-[#D10A22] rounded lg:rounded-lg normal-case hover:bg-[#A0081A]"
-              tabindex="0"
-              type="button"
-            >
-              Login
-            </button>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section
-      class="flex container mx-auto px-8 md:px-0 justify-center py-10 sm:py-14 md:py-16 lg:py-20 container_fluid center"
-    >
-      <div class="text-center md:w-10/12 xl:w-8/12">
-        <h6
-          class="text-lg font-bold text-gray-800 sm:text-xl md:text-2xl"
-          data-aos="fade-up"
-          data-aos-once="true"
-          data-aos-duration="1000"
-        >
-          About our Company
-        </h6>
-        <p
-          class="mt-2 text-sm text-gray-500 sm:text-base md:text-lg lg:mt-4"
-          data-aos="fade-up"
-          data-aos-once="true"
-          data-aos-duration="1000"
-        >
-          Welcome to Datawellng, your one-stop shop for all your retailing data,
-          airtime, bills payment and conversion of airtime to cash needs. Our
-          platform offers you a hassle-free and affordable way to stay connected
-          and handle your bills payments online.
-        </p>
-
-        <section id="services" class="pt-14 md:pt-20 2xl:pt-32 undefined">
-          <div class="text-center col-center">
-            <h6
-              data-aos="fade-up"
-              data-aos-once="true"
-              data-aos-duration="1000"
-              class="font-bold text-gray-800 text-lg sm:text-xl md:text-2xl"
-            >
-              Our Services
-            </h6>
-            <p
-              data-aos="fade-up"
-              data-aos-once="true"
-              data-aos-duration="1000"
-              class="text-sm sm:text-base md:text-lg text-gray-500 undefined"
-            >
-              Here are some of the services we offer
+              About Us
+            </h2>
+            <p class="text-sm text-gray-500 md:text-base lg:text-lg center">
+              Trustworthy experience, dependable service.
             </p>
           </div>
-          <div
-            class="grid sm:grid-cols-2 gap-10 sm:gap-14 md:gap-16 lg:gap-20 mt-10 sm:mt-14 md:mt-16 lg:mt-20"
-          >
-            <div
-              class="flex flex-col items-center md:flex md:flex-row md:w-full md:space-x-8"
-              data-aos="fade-up"
-              data-aos-once="true"
-              data-aos-duration="1000"
-            >
-              <div class="rounded-full bg-[#D10A22] p-8 relative w-16 h-16">
-                <img
-                  alt="Data Purchase"
-                  loading="lazy"
-                  decoding="async"
-                  data-nimg="fill"
-                  class="p-2"
-                  src="../svg/Data Bundle Icon.svg"
-                  style="
-                    position: absolute;
-                    height: 100%;
-                    width: 100%;
-                    inset: 0px;
-                    color: transparent;
-                  "
-                />
-              </div>
-
-              <div class="mt-4 text-center lg:text-left w-fit lg:mt-4 xl:mt-0">
-                <h6
-                  class="font-bold tracking-wide text-gray-800 text-base lg:text-sm"
-                >
-                  Data Purchase
-                </h6>
-
-                <p class="text-gray-500 text-base md:text-sm mt-1 md:mt-2">
-                  We offer affordable data plans for all major networks in
-                  Nigeria. Stay connected to the internet with our fast and
-                  reliable data plans, starting from as low as ₦50.
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="flex flex-col items-center md:flex md:flex-row md:w-full md:space-x-8"
-              data-aos="fade-up"
-              data-aos-once="true"
-              data-aos-duration="1000"
-            >
-              <div class="rounded-full bg-[#D10A22] p-8 relative w-16 h-16">
-                <img
-                  alt="Airtime Purchase"
-                  loading="lazy"
-                  decoding="async"
-                  data-nimg="fill"
-                  class="p-2"
-                  src="../svg/Airtime Purchase.svg"
-                  style="
-                    position: absolute;
-                    height: 100%;
-                    width: 100%;
-                    inset: 0px;
-                    color: transparent;
-                  "
-                />
-              </div>
-
-              <div class="mt-4 text-center lg:text-left w-fit lg:mt-4 xl:mt-0">
-                <h6
-                  class="font-bold tracking-wide text-gray-800 text-base lg:text-sm"
-                >
-                  Airtime Purchase
-                </h6>
-
-                <p class="text-gray-500 text-base md:text-sm mt-1 md:mt-2">
-                  Top up your mobile phone easily and conveniently on our
-                  platform. We offer instant airtime recharge for all networks
-                  in Nigeria at a discounted rate.
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="flex flex-col items-center md:flex md:flex-row md:w-full md:space-x-8"
-              data-aos="fade-up"
-              data-aos-once="true"
-              data-aos-duration="1000"
-            >
-              <div class="rounded-full bg-[#D10A22] p-8 relative w-16 h-16">
-                <img
-                  alt="Bills Payment"
-                  loading="lazy"
-                  decoding="async"
-                  data-nimg="fill"
-                  class="p-2"
-                  src="../svg/bills payment.svg"
-                  style="
-                    position: absolute;
-                    height: 100%;
-                    width: 100%;
-                    inset: 0px;
-                    color: transparent;
-                  "
-                />
-              </div>
-
-              <div class="mt-4 text-center lg:text-left w-fit lg:mt-4 xl:mt-0">
-                <h6
-                  class="font-bold tracking-wide text-gray-800 text-base lg:text-sm"
-                >
-                  Bills Payment
-                </h6>
-
-                <p class="text-gray-500 text-base md:text-sm mt-1 md:mt-2">
-                  Say goodbye to long queues and delays when it comes to bills
-                  payment. You can now pay your electricity bills, cable TV
-                  bills, and other utility bills on our platform, with just a
-                  few clicks.
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="flex flex-col items-center md:flex md:flex-row md:w-full md:space-x-8"
-              data-aos="fade-up"
-              data-aos-once="true"
-              data-aos-duration="1000"
-            >
-              <div class="rounded-full bg-[#D10A22] p-8 relative w-16 h-16">
-                <img
-                  alt="Airtime to Cash Conversion"
-                  loading="lazy"
-                  decoding="async"
-                  data-nimg="fill"
-                  class="p-2"
-                  src="../svg/Airtime to Cash icon.svg"
-                  style="
-                    position: absolute;
-                    height: 100%;
-                    width: 100%;
-                    inset: 0px;
-                    color: transparent;
-                  "
-                />
-              </div>
-
-              <div class="mt-4 text-center lg:text-left w-fit lg:mt-4 xl:mt-0">
-                <h6
-                  class="font-bold tracking-wide text-gray-800 text-base lg:text-sm"
-                >
-                  Airtime to Cash Conversion
-                </h6>
-
-                <p class="text-gray-500 text-base md:text-sm mt-1 md:mt-2">
-                  Do you have excess airtime that you want to convert to cash?
-                  Look no further, as our platform offers a seamless and
-                  affordable way to convert airtime to cash. Get instant cash in
-                  your bank account in no time.
-                </p>
-              </div>
-            </div>
+          <div class="mt-4 space-x-2 lg:mt-8 center">
+            <a href="signup.html">
+              <button
+                class="px-4 py-2 lg:px-10 lg:py-4 text-xs lg:text-sm font-bold text-white bg-[#D10A22] rounded lg:rounded-lg normal-case hover:bg-[#A0081A]"
+                tabindex="0"
+                type="button"
+              >
+                Get Started
+              </button>
+            </a>
+            <a href="./login.html">
+              <button
+                class="px-4 py-2 lg:px-10 lg:py-4 text-xs lg:text-sm font-bold text-white bg-[#D10A22] rounded lg:rounded-lg normal-case hover:bg-[#A0081A]"
+                tabindex="0"
+                type="button"
+              >
+                Login
+              </button>
+            </a>
           </div>
-        </section>
-        <p
-          class="mt-10 text-sm text-gray-500 sm:mt-14 md:mt-16 lg:mt-20 sm:text-base md:text-lg"
-          data-aos="fade-up"
-          data-aos-once="true"
-          data-aos-duration="1000"
-        >
-          At Datawellng, we prioritize the satisfaction of our customers. We are
-          trustworthy and transparent, ensuring that all transactions are
-          carried out safely and securely. Our platform is user-friendly and
-          easy to navigate, making it easy for you to complete your transactions
-          with ease.Stay connected, pay bills, and convert airtime to cash
-          effortlessly with Datawellng.
-        </p>
-      </div>
-    </section>
+        </div>
+      </section>
+
+      <section
+        class="flex container mx-auto px-8 md:px-0 justify-center py-10 sm:py-14 md:py-16 lg:py-20 container_fluid center"
+      >
+        <div class="text-center md:w-10/12 xl:w-8/12">
+          <h6
+            class="text-lg font-bold text-gray-800 sm:text-xl md:text-2xl"
+            data-aos="fade-up"
+            data-aos-once="true"
+            data-aos-duration="1000"
+          >
+            About our Company
+          </h6>
+          <p
+            class="mt-2 text-sm text-gray-500 sm:text-base md:text-lg lg:mt-4"
+            data-aos="fade-up"
+            data-aos-once="true"
+            data-aos-duration="1000"
+          >
+            Welcome to Datawellng, your one-stop shop for all your retailing
+            data, airtime, bills payment and conversion of airtime to cash
+            needs. Our platform offers you a hassle-free and affordable way to
+            stay connected and handle your bills payments online.
+          </p>
+
+          <section id="services" class="pt-14 md:pt-20 2xl:pt-32 undefined">
+            <div class="text-center col-center">
+              <h6
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="font-bold text-gray-800 text-lg sm:text-xl md:text-2xl"
+              >
+                Our Services
+              </h6>
+              <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="text-sm sm:text-base md:text-lg text-gray-500 undefined"
+              >
+                Here are some of the services we offer
+              </p>
+            </div>
+            <div
+              class="grid sm:grid-cols-2 gap-10 sm:gap-14 md:gap-16 lg:gap-20 mt-10 sm:mt-14 md:mt-16 lg:mt-20"
+            >
+              <div
+                class="flex flex-col items-center md:flex md:flex-row md:w-full md:space-x-8"
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+              >
+                <div class="rounded-full bg-[#D10A22] p-8 relative w-16 h-16">
+                  <img
+                    alt="Data Purchase"
+                    loading="lazy"
+                    decoding="async"
+                    data-nimg="fill"
+                    class="p-2"
+                    src="../svg/Data Bundle Icon.svg"
+                    style="
+                      position: absolute;
+                      height: 100%;
+                      width: 100%;
+                      inset: 0px;
+                      color: transparent;
+                    "
+                  />
+                </div>
+
+                <div
+                  class="mt-4 text-center lg:text-left w-fit lg:mt-4 xl:mt-0"
+                >
+                  <h6
+                    class="font-bold tracking-wide text-gray-800 text-base lg:text-sm"
+                  >
+                    Data Purchase
+                  </h6>
+
+                  <p class="text-gray-500 text-base md:text-sm mt-1 md:mt-2">
+                    We offer affordable data plans for all major networks in
+                    Nigeria. Stay connected to the internet with our fast and
+                    reliable data plans, starting from as low as ₦50.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="flex flex-col items-center md:flex md:flex-row md:w-full md:space-x-8"
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+              >
+                <div class="rounded-full bg-[#D10A22] p-8 relative w-16 h-16">
+                  <img
+                    alt="Airtime Purchase"
+                    loading="lazy"
+                    decoding="async"
+                    data-nimg="fill"
+                    class="p-2"
+                    src="../svg/Airtime Purchase.svg"
+                    style="
+                      position: absolute;
+                      height: 100%;
+                      width: 100%;
+                      inset: 0px;
+                      color: transparent;
+                    "
+                  />
+                </div>
+
+                <div
+                  class="mt-4 text-center lg:text-left w-fit lg:mt-4 xl:mt-0"
+                >
+                  <h6
+                    class="font-bold tracking-wide text-gray-800 text-base lg:text-sm"
+                  >
+                    Airtime Purchase
+                  </h6>
+
+                  <p class="text-gray-500 text-base md:text-sm mt-1 md:mt-2">
+                    Top up your mobile phone easily and conveniently on our
+                    platform. We offer instant airtime recharge for all networks
+                    in Nigeria at a discounted rate.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="flex flex-col items-center md:flex md:flex-row md:w-full md:space-x-8"
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+              >
+                <div class="rounded-full bg-[#D10A22] p-8 relative w-16 h-16">
+                  <img
+                    alt="Bills Payment"
+                    loading="lazy"
+                    decoding="async"
+                    data-nimg="fill"
+                    class="p-2"
+                    src="../svg/bills payment.svg"
+                    style="
+                      position: absolute;
+                      height: 100%;
+                      width: 100%;
+                      inset: 0px;
+                      color: transparent;
+                    "
+                  />
+                </div>
+
+                <div
+                  class="mt-4 text-center lg:text-left w-fit lg:mt-4 xl:mt-0"
+                >
+                  <h6
+                    class="font-bold tracking-wide text-gray-800 text-base lg:text-sm"
+                  >
+                    Bills Payment
+                  </h6>
+
+                  <p class="text-gray-500 text-base md:text-sm mt-1 md:mt-2">
+                    Say goodbye to long queues and delays when it comes to bills
+                    payment. You can now pay your electricity bills, cable TV
+                    bills, and other utility bills on our platform, with just a
+                    few clicks.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="flex flex-col items-center md:flex md:flex-row md:w-full md:space-x-8"
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+              >
+                <div class="rounded-full bg-[#D10A22] p-8 relative w-16 h-16">
+                  <img
+                    alt="Airtime to Cash Conversion"
+                    loading="lazy"
+                    decoding="async"
+                    data-nimg="fill"
+                    class="p-2"
+                    src="../svg/Airtime to Cash icon.svg"
+                    style="
+                      position: absolute;
+                      height: 100%;
+                      width: 100%;
+                      inset: 0px;
+                      color: transparent;
+                    "
+                  />
+                </div>
+
+                <div
+                  class="mt-4 text-center lg:text-left w-fit lg:mt-4 xl:mt-0"
+                >
+                  <h6
+                    class="font-bold tracking-wide text-gray-800 text-base lg:text-sm"
+                  >
+                    Airtime to Cash Conversion
+                  </h6>
+
+                  <p class="text-gray-500 text-base md:text-sm mt-1 md:mt-2">
+                    Do you have excess airtime that you want to convert to cash?
+                    Look no further, as our platform offers a seamless and
+                    affordable way to convert airtime to cash. Get instant cash
+                    in your bank account in no time.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <p
+            class="mt-10 text-sm text-gray-500 sm:mt-14 md:mt-16 lg:mt-20 sm:text-base md:text-lg"
+            data-aos="fade-up"
+            data-aos-once="true"
+            data-aos-duration="1000"
+          >
+            At Datawellng, we prioritize the satisfaction of our customers. We
+            are trustworthy and transparent, ensuring that all transactions are
+            carried out safely and securely. Our platform is user-friendly and
+            easy to navigate, making it easy for you to complete your
+            transactions with ease.Stay connected, pay bills, and convert
+            airtime to cash effortlessly with Datawellng.
+          </p>
+        </div>
+      </section>
+    </main>
 
     <footer
-      class="mx-auto py-10 font-medium tracking-wide text-zinc-300 bg-zinc-700 md:py-14 2xl:py-20"
+      class="hide-on-mobile-nav hidden mx-auto py-10 font-medium tracking-wide text-zinc-300 bg-zinc-700 md:py-14 2xl:py-20"
     >
       <div
         class="mx-auto flex flex-col lg:flex-row px-8 md:px-24 lg:flex lg:justify-between"

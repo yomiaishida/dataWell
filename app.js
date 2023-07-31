@@ -1,83 +1,61 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const firstButton = document.getElementById("firstButton");
-  const secondButton = document.getElementById("secondButton");
-  const firstDiv = document.getElementById("firstDiv");
-  const secondDiv = document.getElementById("secondDiv");
-  let showFirst = true;
+  // show hamburger and search icon's svg
+  const hamburgerBtn = document.getElementById("hamburgerBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const sectionsToHide = document.querySelectorAll(".hide-on-mobile-nav");
 
-  // Show the second div and hide the first div
-  function showSecondDiv() {
-    firstDiv.classList.add("hidden");
-    firstButton.classList.remove("md:bg-red-500");
-    secondDiv.classList.remove("hidden");
-    firstButton.classList.add("md:bg-red-200");
-    secondButton.classList.remove("md:bg-red-200");
-    secondButton.classList.add("md:bg-red-500");
-    showFirst = false;
-  }
-
-  // Show the first div and hide the second div
-  function showFirstDiv() {
-    firstDiv.classList.remove("hidden");
-    firstDiv.classList.remove("bg-red-200");
-    secondDiv.classList.add("hidden");
-    firstButton.classList.remove("md:bg-red-200");
-    secondButton.classList.remove("md:bg-red-500");
-    firstButton.classList.add("md:bg-red-500");
-    secondButton.classList.add("md:bg-red-200");
-    showFirst = true;
-  }
-
-  // Add click event listeners to the pagination buttons
-  firstButton.addEventListener("click", showFirstDiv);
-  secondButton.addEventListener("click", showSecondDiv);
-
-  // Function to switch divs every 1000 milliseconds (1 second)
-  function switchDivs() {
-    if (showFirst) {
-      showSecondDiv();
-    } else {
-      showFirstDiv();
-    }
-  }
-
-  // Start the interval to switch divs
-  setInterval(switchDivs, 9000);
-});
-
-// show hamburger and search icon's svg
-const hamburgerBtn = document.getElementById("hamburgerBtn");
-const mobileMenu = document.getElementById("mobileMenu");
-
-hamburgerBtn.addEventListener("click", () => {
-  mobileMenu.classList.toggle("hidden");
   if (!mobileMenu.classList.contains("hidden")) {
-    // Cancel icon SVG
-    hamburgerBtn.innerHTML = `<svg
-    class="fill-gray-400 w-4 h-4"
-    focusable="false"
-    aria-hidden="true"
-    viewBox="0 0 24 24"
-    data-testid="CloseIcon"
-  >
-    <path
-      d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
-    ></path>
-  </svg>`;
+    // Add tailwind class to hide other sections
+    sectionsToHide.forEach((section) => {
+      section.classList.add("hidden");
+    });
   } else {
-    // Hamburger menu icon SVG
-    hamburgerBtn.innerHTML = `
-    <svg
-              class="w-4 h-4 fill-gray-400"
-              focusable="false"
-              aria-hidden="true"
-              viewBox="0 0 24 24"
-              data-testid="MenuIcon"
-            >
-              <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
-            </svg>
-      `;
+    // Remove tailwind class that hides other section
+    sectionsToHide.forEach((section) => {
+      section.classList.remove("hidden");
+    });
   }
+
+  hamburgerBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+    if (!mobileMenu.classList.contains("hidden")) {
+      // Add tailwind class to hide other sections
+      sectionsToHide.forEach((section) => {
+        section.classList.add("hidden");
+      });
+
+      // Cancel icon SVG
+      hamburgerBtn.innerHTML = `<svg
+      class="fill-gray-400 w-4 h-4"
+      focusable="false"
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      data-testid="CloseIcon"
+    >
+      <path
+        d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+      ></path>
+    </svg>`;
+    } else {
+      // Toggle the visibility of the sections to hide
+      sectionsToHide.forEach((section) => {
+        section.classList.remove("hidden");
+      });
+
+      // Hamburger menu icon SVG
+      hamburgerBtn.innerHTML = `
+      <svg
+                class="w-4 h-4 fill-gray-400"
+                focusable="false"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                data-testid="MenuIcon"
+              >
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+              </svg>
+        `;
+    }
+  });
 });
 
 // Display Search Cancel Icon when search icon is clicked
@@ -114,7 +92,7 @@ searchIcon.addEventListener("click", () => {
   searchInput.focus();
 });
 
-// Display Search Cancel Icon when search icon is clicked
+// Display Search Cancel Icon when search icon is clicked on Large Screens
 const lgSearchIcon = document.getElementById("lgSearchIcon");
 const lgSearchInput = document.getElementById("lgSearchInput");
 

@@ -10,6 +10,11 @@
       rel="stylesheet"
     />
 
+    <link
+      rel="stylesheet"
+      href="./node_modules/a11y-slider/dist/a11y-slider.css"
+    />
+    <script src="./node_modules/a11y-slider/dist/a11y-slider.js"></script>
     <title>Home | The Data Well Nigeria</title>
   </head>
   <body>
@@ -272,750 +277,314 @@
       </div>
     </nav>
 
-    <section class="flex justify-center md:mx-auto md:px-40" id="hero">
-      <div
-        class="w-full md:h-[calc(100vh-96px)] lg:h-[calc(100vh-72px)] flex items-end max-h-[1024px] 2xl:max-h-[1080px] relative"
-      >
-        <div class="flex paginator">
-          <div class="mx-" id="firstDiv">
-            <div
-              class="py-10 md:my-auto md:flex md:between md:items-center md:mx-auto md:py-0"
-            >
+    <main id="main" class="hide-on-mobile-nav">
+      <section class="flex justify-center p-8 md:mx-auto md:px-40" id="hero">
+        <div
+          class="w-full md:h-[calc(100vh-96px)] lg:h-[calc(100vh-72px)] flex items-end max-h-[1024px] 2xl:max-h-[1080px] relative"
+        >
+          <div class="flex paginator">
+            <div class="mx-" id="firstDiv">
               <div
-                data-aos="fade-right"
-                data-aos-duration="1000"
-                class="md:col-start-1 h-full md:w-1/2 mt-8 md:mt-0 order-last"
+                class="py-10 md:my-auto md:flex md:between md:items-center md:mx-auto md:py-0"
               >
-                <h1
-                  class="text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl text-center md:text-left font-bold text-gray-800"
+                <div
+                  data-aos="fade-right"
+                  data-aos-duration="1000"
+                  class="md:col-start-1 h-full md:w-1/2 mt-8 md:mt-0 order-last"
                 >
-                  Earn money through online reselling
-                </h1>
-
-                <p
-                  class="md:w-8/12 text-base lg:text-lg text-center md:text-left text-gray-500 mt-2 md:mt-4"
-                >
-                  Offer internet data, VTU services, and utility bill payments
-                  to your friends and family and generate a substantial income.
-                </p>
-
-                <a
-                  href="./signup.html"
-                  class="flex justify-center py-4 md:justify-start"
-                >
-                  <button
-                    class="px-4 py-2 mt-4 text-sm rounded sm:px-6 sm:py-3 sm:mt-6 md:text-base md:rounded-md lg:px-10 lg:py-4 lg:mt-8 lg:text-lg font-bold text-white transition-colors hover:bg-[#A0081A] bg-[#D10A22] lg:rounded-lg normal-case"
+                  <h1
+                    class="text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl text-center md:text-left font-bold text-gray-800"
                   >
-                    Get Started
-                  </button>
-                </a>
-              </div>
+                    Earn money through online reselling
+                  </h1>
 
+                  <p
+                    class="md:w-8/12 text-base lg:text-lg text-center md:text-left text-gray-500 mt-2 md:mt-4"
+                  >
+                    Offer internet data, VTU services, and utility bill payments
+                    to your friends and family and generate a substantial
+                    income.
+                  </p>
+
+                  <a
+                    href="./signup.html"
+                    class="flex justify-center py-4 md:justify-start"
+                  >
+                    <button
+                      class="px-4 py-2 mt-4 text-sm rounded sm:px-6 sm:py-3 sm:mt-6 md:text-base md:rounded-md lg:px-10 lg:py-4 lg:mt-8 lg:text-lg font-bold text-white transition-colors hover:bg-[#A0081A] bg-[#D10A22] lg:rounded-lg normal-case"
+                    >
+                      Get Started
+                    </button>
+                  </a>
+                </div>
+
+                <div
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                  class="w-full md:w-1/2 h-60 md:h-full md:min-h-[600px] bg-zinc-200 order-first md:order-last"
+                ></div>
+              </div>
+            </div>
+
+            <div class="second hidden" id="secondDiv">
               <div
-                data-aos="fade-left"
-                data-aos-duration="1000"
-                class="w-full md:w-1/2 h-60 md:h-full md:min-h-[600px] bg-zinc-200 order-first md:order-last"
-              ></div>
+                class="py-10 md:my-auto md:flex md:items-center md:space-x-4 lg:space-x-8 md:between col-center md:py-0"
+              >
+                <div
+                  data-aos="fade-right"
+                  data-aos-duration="1000"
+                  class="col-center md:col-start h-full md:w-1/2 mt-8 md:mt-0"
+                >
+                  <h1
+                    class="text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl text-center md:text-left font-bold text-gray-800"
+                  >
+                    Stay connected with ease!
+                  </h1>
+
+                  <p
+                    class="md:w-8/12 text-base lg:text-lg text-center md:text-left text-gray-500 mt-2 md:mt-4"
+                  >
+                    Benefit from significantly reduced prices on internet data
+                    plans, airtime top-ups via VTU, and utility bill payments.
+                    Plus, you can even convert your airtime to cash. quos.
+                  </p>
+
+                  <a
+                    href="./signup.html"
+                    class="flex justify-center py-4 md:justify-start"
+                  >
+                    <button
+                      class="px-4 py-2 mt-4 text-sm rounded sm:px-6 sm:py-3 sm:mt-6 md:text-base md:rounded-md lg:px-10 lg:py-4 lg:mt-8 lg:text-lg font-bold text-white transition-colors hover:bg-[#A0081A] bg-[#D10A22] lg:rounded-lg normal-case"
+                    >
+                      Get Started
+                    </button>
+                  </a>
+                </div>
+
+                <div
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                  class="w-full md:w-1/2 h-60 md:h-full md:min-h-[600px] bg-zinc-200 order-first md:order-last"
+                ></div>
+              </div>
             </div>
           </div>
 
-          <div class="second hidden" id="secondDiv">
-            <div
-              class="py-10 md:my-auto md:flex md:items-center md:space-x-4 lg:space-x-8 md:between col-center md:py-0"
-            >
-              <div
-                data-aos="fade-right"
-                data-aos-duration="1000"
-                class="col-center md:col-start h-full md:w-1/2 mt-8 md:mt-0"
-              >
-                <h1
-                  class="text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl text-center md:text-left font-bold text-gray-800"
-                >
-                  Stay connected with ease!
-                </h1>
-
-                <p
-                  class="md:w-8/12 text-base lg:text-lg text-center md:text-left text-gray-500 mt-2 md:mt-4"
-                >
-                  Benefit from significantly reduced prices on internet data
-                  plans, airtime top-ups via VTU, and utility bill payments.
-                  Plus, you can even convert your airtime to cash. quos.
-                </p>
-
-                <a
-                  href="./signup.html"
-                  class="flex justify-center py-4 md:justify-start"
-                >
-                  <button
-                    class="px-4 py-2 mt-4 text-sm rounded sm:px-6 sm:py-3 sm:mt-6 md:text-base md:rounded-md lg:px-10 lg:py-4 lg:mt-8 lg:text-lg font-bold text-white transition-colors hover:bg-[#A0081A] bg-[#D10A22] lg:rounded-lg normal-case"
-                  >
-                    Get Started
-                  </button>
-                </a>
-              </div>
-
-              <div
-                data-aos="fade-left"
-                data-aos-duration="1000"
-                class="w-full md:w-1/2 h-60 md:h-full md:min-h-[600px] bg-zinc-200 order-first md:order-last"
-              ></div>
-            </div>
+          <div class="md:h-11 flex md:w-20 md:mr-12 absolute bottom-0 right-4">
+            <span
+              class="md:-mt-10 md:w-4 cursor-pointer md:h-4 mr-4 rounded-full md:bg-red-500"
+              id="firstButton"
+            ></span>
+            <span
+              class="md:-mt-10 cursor-pointer md:w-4 md:h-4 rounded-full md:bg-red-200"
+              id="secondButton"
+            ></span>
           </div>
         </div>
+      </section>
 
-        <div class="md:h-11 flex md:w-20 md:mr-12 absolute bottom-0 right-4">
-          <span
-            class="md:-mt-10 md:w-4 cursor-pointer md:h-4 mr-4 rounded-full md:bg-red-500"
-            id="firstButton"
-          ></span>
-          <span
-            class="md:-mt-10 cursor-pointer md:w-4 md:h-4 rounded-full md:bg-red-200"
-            id="secondButton"
-          ></span>
-        </div>
-      </div>
-    </section>
-
-    <section
-      class="mx-auto px-8 md:px-40 mt-20 md:pt-16 2xl:pt-32"
-      id="services"
-    >
-      <div class="text-center">
-        <h6
-          data-aos="fade-up"
-          data-aos-once="true"
-          data-aos-duration="1000"
-          class="font-bold text-gray-800 text-2xl text-center lg:text-4xl"
-        >
-          Our Services
-        </h6>
-        <p
-          data-aos="fade-up"
-          data-aos-once="true"
-          data-aos-duration="1000"
-          class="text-sm sm:text-base md:text-lg w-full text-center text-gray-500 mt-2 md:mt-4"
-        >
-          Here are some of the services we offer
-        </p>
-      </div>
-
-      <div
-        class="grid sm:grid-cols-2 gap-10 sm:gap-14 md:gap-16 lg:gap-20 mt-10 sm:mt-14 md:mt-16 lg:mt-20"
+      <section
+        class="mx-auto px-8 md:px-40 mt-20 md:pt-16 2xl:pt-32"
+        id="services"
       >
-        <div
-          class="flex flex-col items-center md:flex md:flex-row md:w-full md:space-x-8"
-          data-aos="fade-up"
-          data-aos-once="true"
-          data-aos-duration="1000"
-        >
-          <div class="rounded-full bg-[#D10A22] p-8 relative w-20 h-20">
-            <img
-              alt="Data Purchase"
-              loading="lazy"
-              decoding="async"
-              data-nimg="fill"
-              class="p-2"
-              src="../svg/Data Bundle Icon.svg"
-              style="
-                position: absolute;
-                height: 100%;
-                width: 100%;
-                inset: 0px;
-                color: transparent;
-              "
-            />
-          </div>
-
-          <div class="mt-4 text-center lg:text-left w-fit lg:mt-4 xl:mt-0">
-            <h6
-              class="font-bold tracking-wide text-gray-800 text-base lg:text-lg"
-            >
-              Data Purchase
-            </h6>
-
-            <p class="text-gray-500 text-base md:text-lg mt-1 md:mt-2">
-              We offer affordable data plans for all major networks in Nigeria.
-              Stay connected to the internet with our fast and reliable data
-              plans, starting from as low as ₦50.
-            </p>
-          </div>
-        </div>
-
-        <div
-          class="flex flex-col items-center md:flex md:flex-row md:w-full md:space-x-8"
-          data-aos="fade-up"
-          data-aos-once="true"
-          data-aos-duration="1000"
-        >
-          <div class="rounded-full bg-[#D10A22] p-8 relative w-20 h-20">
-            <img
-              alt="Airtime Purchase"
-              loading="lazy"
-              decoding="async"
-              data-nimg="fill"
-              class="p-2"
-              src="../svg/Airtime Purchase.svg"
-              style="
-                position: absolute;
-                height: 100%;
-                width: 100%;
-                inset: 0px;
-                color: transparent;
-              "
-            />
-          </div>
-
-          <div class="mt-4 text-center lg:text-left w-fit lg:mt-4 xl:mt-0">
-            <h6
-              class="font-bold tracking-wide text-gray-800 text-base lg:text-lg"
-            >
-              Airtime Purchase
-            </h6>
-
-            <p class="text-gray-500 text-base md:text-lg mt-1 md:mt-2">
-              Top up your mobile phone easily and conveniently on our platform.
-              We offer instant airtime recharge for all networks in Nigeria at a
-              discounted rate.
-            </p>
-          </div>
-        </div>
-
-        <div
-          class="flex flex-col items-center md:flex md:flex-row md:w-full md:space-x-8"
-          data-aos="fade-up"
-          data-aos-once="true"
-          data-aos-duration="1000"
-        >
-          <div class="rounded-full bg-[#D10A22] p-8 relative w-20 h-20">
-            <img
-              alt="Bills Payment"
-              loading="lazy"
-              decoding="async"
-              data-nimg="fill"
-              class="p-2"
-              src="../svg/bills payment.svg"
-              style="
-                position: absolute;
-                height: 100%;
-                width: 100%;
-                inset: 0px;
-                color: transparent;
-              "
-            />
-          </div>
-
-          <div class="mt-4 text-center lg:text-left w-fit lg:mt-4 xl:mt-0">
-            <h6
-              class="font-bold tracking-wide text-gray-800 text-base lg:text-lg"
-            >
-              Bills Payment
-            </h6>
-
-            <p class="text-gray-500 text-base md:text-lg mt-1 md:mt-2">
-              Say goodbye to long queues and delays when it comes to bills
-              payment. You can now pay your electricity bills, cable TV bills,
-              and other utility bills on our platform, with just a few clicks.
-            </p>
-          </div>
-        </div>
-
-        <div
-          class="flex flex-col items-center md:flex md:flex-row md:w-full md:space-x-8"
-          data-aos="fade-up"
-          data-aos-once="true"
-          data-aos-duration="1000"
-        >
-          <div class="rounded-full bg-[#D10A22] p-8 relative w-20 h-20">
-            <img
-              alt="Airtime to Cash Conversion"
-              loading="lazy"
-              decoding="async"
-              data-nimg="fill"
-              class="p-2"
-              src="../svg/Airtime to Cash icon.svg"
-              style="
-                position: absolute;
-                height: 100%;
-                width: 100%;
-                inset: 0px;
-                color: transparent;
-              "
-            />
-          </div>
-
-          <div class="mt-4 text-center lg:text-left w-fit lg:mt-4 xl:mt-0">
-            <h6
-              class="font-bold tracking-wide text-gray-800 text-base lg:text-lg"
-            >
-              Airtime to Cash Conversion
-            </h6>
-
-            <p class="text-gray-500 text-base md:text-lg mt-1 md:mt-2">
-              Do you have excess airtime that you want to convert to cash? Look
-              no further, as our platform offers a seamless and affordable way
-              to convert airtime to cash. Get instant cash in your bank account
-              in no time.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div
-        class="text-center my-14 md:my-20 2xl:my-32 aos-init"
-        data-aos="fade-up"
-        data-aos-once="true"
-        data-aos-duration="1000"
-      >
-        <a href="/about#services" class="flex items-center justify-center">
-          <button
-            class="flex items-center px-4 text-sm normal-case md:px-6 lg:px-8 md:text-base text-[#D10A22] border-[#D10A22] border-2 rounded-md hover:border-transparent hover:bg-[#D10A22] hover:text-white space-y-8"
-            tabindex="0"
-            type="button"
+        <div class="text-center">
+          <h6
+            data-aos="fade-up"
+            data-aos-once="true"
+            data-aos-duration="1000"
+            class="font-bold text-gray-800 text-2xl text-center lg:text-4xl"
           >
-            View All Services
-            <span class="ml-2">
-              <svg
-                width="20px"
-                height="20px"
-                class="fill-current hover:fill-[white]"
-                focusable="false"
-                aria-hidden="true"
-                viewBox="0 0 24 24"
-                data-testid="EastIcon"
-              >
-                <path
-                  d="m15 5-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
-                ></path>
-              </svg>
-            </span>
-            <span class="MuiTouchRipple-root css-w0pj6f"></span>
-          </button>
-        </a>
-      </div>
-    </section>
+            Our Services
+          </h6>
+          <p
+            data-aos="fade-up"
+            data-aos-once="true"
+            data-aos-duration="1000"
+            class="text-sm sm:text-base md:text-lg w-full text-center text-gray-500 mt-2 md:mt-4"
+          >
+            Here are some of the services we offer
+          </p>
+        </div>
 
-    <section id="articles" class="bg-gray-100 py-14 md:py-20 2xl:py-32">
-      <div class="col-center mx-auto md:px-40">
-        <div class="space-y-4 text-center w-fit col-center">
-          <h2
-            class="font-sans text-2xl font-bold text-gray-800 text-center lg:text-4xl"
+        <div
+          class="grid sm:grid-cols-2 gap-10 sm:gap-14 md:gap-16 lg:gap-20 mt-10 sm:mt-14 md:mt-16 lg:mt-20"
+        >
+          <div
+            class="flex flex-col items-center md:flex md:flex-row md:w-full md:space-x-8"
             data-aos="fade-up"
             data-aos-once="true"
             data-aos-duration="1000"
           >
-            Top Articles
-          </h2>
+            <div class="rounded-full bg-[#D10A22] p-8 relative w-20 h-20">
+              <img
+                alt="Data Purchase"
+                loading="lazy"
+                decoding="async"
+                data-nimg="fill"
+                class="p-2"
+                src="../svg/Data Bundle Icon.svg"
+                style="
+                  position: absolute;
+                  height: 100%;
+                  width: 100%;
+                  inset: 0px;
+                  color: transparent;
+                "
+              />
+            </div>
+
+            <div class="mt-4 text-center lg:text-left w-fit lg:mt-4 xl:mt-0">
+              <h6
+                class="font-bold tracking-wide text-gray-800 text-base lg:text-lg"
+              >
+                Data Purchase
+              </h6>
+
+              <p class="text-gray-500 text-base md:text-lg mt-1 md:mt-2">
+                We offer affordable data plans for all major networks in
+                Nigeria. Stay connected to the internet with our fast and
+                reliable data plans, starting from as low as ₦50.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col items-center md:flex md:flex-row md:w-full md:space-x-8"
+            data-aos="fade-up"
+            data-aos-once="true"
+            data-aos-duration="1000"
+          >
+            <div class="rounded-full bg-[#D10A22] p-8 relative w-20 h-20">
+              <img
+                alt="Airtime Purchase"
+                loading="lazy"
+                decoding="async"
+                data-nimg="fill"
+                class="p-2"
+                src="../svg/Airtime Purchase.svg"
+                style="
+                  position: absolute;
+                  height: 100%;
+                  width: 100%;
+                  inset: 0px;
+                  color: transparent;
+                "
+              />
+            </div>
+
+            <div class="mt-4 text-center lg:text-left w-fit lg:mt-4 xl:mt-0">
+              <h6
+                class="font-bold tracking-wide text-gray-800 text-base lg:text-lg"
+              >
+                Airtime Purchase
+              </h6>
+
+              <p class="text-gray-500 text-base md:text-lg mt-1 md:mt-2">
+                Top up your mobile phone easily and conveniently on our
+                platform. We offer instant airtime recharge for all networks in
+                Nigeria at a discounted rate.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col items-center md:flex md:flex-row md:w-full md:space-x-8"
+            data-aos="fade-up"
+            data-aos-once="true"
+            data-aos-duration="1000"
+          >
+            <div class="rounded-full bg-[#D10A22] p-8 relative w-20 h-20">
+              <img
+                alt="Bills Payment"
+                loading="lazy"
+                decoding="async"
+                data-nimg="fill"
+                class="p-2"
+                src="../svg/bills payment.svg"
+                style="
+                  position: absolute;
+                  height: 100%;
+                  width: 100%;
+                  inset: 0px;
+                  color: transparent;
+                "
+              />
+            </div>
+
+            <div class="mt-4 text-center lg:text-left w-fit lg:mt-4 xl:mt-0">
+              <h6
+                class="font-bold tracking-wide text-gray-800 text-base lg:text-lg"
+              >
+                Bills Payment
+              </h6>
+
+              <p class="text-gray-500 text-base md:text-lg mt-1 md:mt-2">
+                Say goodbye to long queues and delays when it comes to bills
+                payment. You can now pay your electricity bills, cable TV bills,
+                and other utility bills on our platform, with just a few clicks.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col items-center md:flex md:flex-row md:w-full md:space-x-8"
+            data-aos="fade-up"
+            data-aos-once="true"
+            data-aos-duration="1000"
+          >
+            <div class="rounded-full bg-[#D10A22] p-8 relative w-20 h-20">
+              <img
+                alt="Airtime to Cash Conversion"
+                loading="lazy"
+                decoding="async"
+                data-nimg="fill"
+                class="p-2"
+                src="../svg/Airtime to Cash icon.svg"
+                style="
+                  position: absolute;
+                  height: 100%;
+                  width: 100%;
+                  inset: 0px;
+                  color: transparent;
+                "
+              />
+            </div>
+
+            <div class="mt-4 text-center lg:text-left w-fit lg:mt-4 xl:mt-0">
+              <h6
+                class="font-bold tracking-wide text-gray-800 text-base lg:text-lg"
+              >
+                Airtime to Cash Conversion
+              </h6>
+
+              <p class="text-gray-500 text-base md:text-lg mt-1 md:mt-2">
+                Do you have excess airtime that you want to convert to cash?
+                Look no further, as our platform offers a seamless and
+                affordable way to convert airtime to cash. Get instant cash in
+                your bank account in no time.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div
-          class="grid mt-6 sm:grid-cols-2 lg:grid-cols-3 sm:mt-10 md:mt-14 lg:mt-20 sm:gap-x-10 md:gap-x-14 lg:gap-x-14 xl:gap-x-16 2xl:gap-x-20 gap-y-6 sm:gap-y-10 md:gap-y-14 lg:gap-y-28 auto-rows-auto"
-        >
-          <a
-            href="/blog/Cheaper_Data_Bundle_now_available_for_University_Students"
-          >
-            <div
-              data-aos="fade-up"
-              data-aos-once="true"
-              data-aos-duration="1000"
-              class="h-full"
-            >
-              <div
-                class="md:flex-none h-full overflow-hidden transition-shadow bg-gray-200 rounded-md hover:shadow-md"
-              >
-                <img
-                  alt="Cheaper Data Bundle now available for University Students"
-                  loading="lazy"
-                  width="150"
-                  height="150"
-                  decoding="async"
-                  data-nimg="1"
-                  class="w-full h-40 object-cover object-center md:w-full sm:h-48"
-                  src="../images/Cheaper_Data_Bundle_now_available_for_University_Students.webp"
-                />
-
-                <div
-                  class="w-full h-[calc(100%-160px)] md:w-full px-4 py-6 xl:py-8 space-y-1.5 md:space-y-3 col-between sm:h-[calc(100%-192px)] order-first md:order-last"
-                >
-                  <h4 class="text-base font-bold text-gray-800 md:text-lg">
-                    Cheaper Data Bundle now available for University Students
-                  </h4>
-
-                  <div class="space-x-4 start flex">
-                    <h4
-                      class="text-xs font-medium flex text-gray-600 md:text-sm"
-                    >
-                      <svg
-                        width="18px"
-                        height="18px"
-                        class="text-base mr-2 fill-current text-gray-500"
-                        focusable="false"
-                        aria-hidden="true"
-                        viewBox="0 0 24 24"
-                        data-testid="AccessTimeIcon"
-                      >
-                        <path
-                          d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-                        ></path>
-                        <path
-                          d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"
-                        ></path>
-                      </svg>
-                      3 months ago
-                    </h4>
-
-                    <h4
-                      class="text-xs font-medium flex text-gray-600 md:text-sm"
-                    >
-                      <svg
-                        width="18px"
-                        height="18px"
-                        class="text-base mr-2 fill-current text-gray-500 css-vubbuv"
-                        focusable="false"
-                        aria-hidden="true"
-                        viewBox="0 0 24 24"
-                        data-testid="CommentOutlinedIcon"
-                      >
-                        <path
-                          d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM20 4v13.17L18.83 16H4V4h16zM6 12h12v2H6zm0-3h12v2H6zm0-3h12v2H6z"
-                        ></path>
-                      </svg>
-                      0
-                    </h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <a
-            href="/blog/Stay_Connected_During_the_Elections_with_Cheaper_MTN_Data_Bundles"
-          >
-            <div
-              data-aos="fade-up"
-              data-aos-once="true"
-              data-aos-duration="1000"
-              class="h-full"
-            >
-              <div
-                class="between-start md:flex-col md:flex-none h-full overflow-hidden transition-shadow bg-gray-200 rounded-md hover:shadow-md"
-              >
-                <img
-                  alt="Stay Connected During the Elections with Cheaper MTN Data Bundles"
-                  loading="lazy"
-                  width="150"
-                  height="150"
-                  decoding="async"
-                  data-nimg="1"
-                  class="w-full h-40 object-cover object-center md:w-full sm:h-48"
-                  src="../images/Stay_Connected_During_the_Elections_with_Cheaper_MTN_Data_Bundles.webp"
-                  style="color: transparent"
-                />
-
-                <div
-                  class="w-2/3 h-[calc(100%-112px)] md:w-full px-4 py-6 xl:py-8 space-y-1.5 md:space-y-3 col-between sm:h-[calc(100%-192px)] order-first md:order-last"
-                >
-                  <h4 class="text-base font-bold text-gray-800 md:text-lg">
-                    Stay Connected During the Elections with Cheaper MTN Data
-                    Bundles
-                  </h4>
-
-                  <div class="space-x-4 start flex">
-                    <h4
-                      class="text-xs font-medium flex text-gray-600 md:text-sm"
-                    >
-                      <svg
-                        width="18px"
-                        height="18px"
-                        class="text-base mr-2 fill-current text-gray-500 css-vubbuv"
-                        focusable="false"
-                        aria-hidden="true"
-                        viewBox="0 0 24 24"
-                        data-testid="AccessTimeIcon"
-                      >
-                        <path
-                          d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-                        ></path>
-                        <path
-                          d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"
-                        ></path>
-                      </svg>
-                      3 months ago
-                    </h4>
-
-                    <h4
-                      class="text-xs font-medium flex text-gray-600 md:text-sm"
-                    >
-                      <svg
-                        width="18px"
-                        height="18px"
-                        class="text-base mr-2 fill-current text-gray-500 css-vubbuv"
-                        focusable="false"
-                        aria-hidden="true"
-                        viewBox="0 0 24 24"
-                        data-testid="CommentOutlinedIcon"
-                      >
-                        <path
-                          d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM20 4v13.17L18.83 16H4V4h16zM6 12h12v2H6zm0-3h12v2H6zm0-3h12v2H6z"
-                        ></path>
-                      </svg>
-                      0
-                    </h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <a
-            href="/blog/Stay_Connected_During_the_Elections_with_Cheaper_MTN_Data_Bundles_2"
-          >
-            <div
-              data-aos="fade-up"
-              data-aos-once="true"
-              data-aos-duration="1000"
-              class="h-full"
-            >
-              <div
-                class="between-start md:flex-col md:flex-none h-full overflow-hidden transition-shadow bg-gray-200 rounded-md hover:shadow-md"
-              >
-                <img
-                  alt="Stay Connected During the Elections with Cheaper MTN Data Bundles"
-                  loading="lazy"
-                  width="150"
-                  height="150"
-                  decoding="async"
-                  data-nimg="1"
-                  class="w-full h-40 object-cover object-center md:w-full sm:h-48"
-                  src="../images/Stay_Connected_During_the_Elections_with_Cheaper_MTN_Data_Bundles_2.webp"
-                />
-
-                <div
-                  class="w-2/3 h-[calc(100%-112px)] md:w-full px-4 py-6 xl:py-8 space-y-1.5 md:space-y-3 col-between sm:h-[calc(100%-192px)] order-first md:order-last"
-                >
-                  <h4 class="text-base font-bold text-gray-800 md:text-lg">
-                    Stay Connected During the Elections with Cheaper MTN Data
-                    Bundles
-                  </h4>
-
-                  <div class="space-x-4 start flex">
-                    <h4
-                      class="text-xs font-medium flex text-gray-600 md:text-sm"
-                    >
-                      <svg
-                        width="18px"
-                        height="18px"
-                        class="text-base mr-2 fill-current text-gray-500 css-vubbuv"
-                        focusable="false"
-                        aria-hidden="true"
-                        viewBox="0 0 24 24"
-                        data-testid="AccessTimeIcon"
-                      >
-                        <path
-                          d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-                        ></path>
-                        <path
-                          d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"
-                        ></path>
-                      </svg>
-                      3 months ago
-                    </h4>
-
-                    <h4
-                      class="text-xs font-medium flex text-gray-600 md:text-sm"
-                    >
-                      <svg
-                        width="18px"
-                        height="18px"
-                        class="text-base mr-2 fill-current text-gray-500 css-vubbuv"
-                        focusable="false"
-                        aria-hidden="true"
-                        viewBox="0 0 24 24"
-                        data-testid="CommentOutlinedIcon"
-                      >
-                        <path
-                          d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM20 4v13.17L18.83 16H4V4h16zM6 12h12v2H6zm0-3h12v2H6zm0-3h12v2H6z"
-                        ></path>
-                      </svg>
-                      0
-                    </h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <a
-            href="/blog/Stay_Connected_with_Her_Family_and_Friends_At_Cheaper_Costs"
-          >
-            <div
-              data-aos="fade-up"
-              data-aos-once="true"
-              data-aos-duration="1000"
-              class="h-full"
-            >
-              <div
-                class="md:flex-none h-full overflow-hidden transition-shadow bg-gray-200 rounded-md hover:shadow-md"
-              >
-                <img
-                  alt="Stay Connected with Her Family and Friends At Cheaper Costs"
-                  loading="lazy"
-                  width="150"
-                  height="150"
-                  decoding="async"
-                  data-nimg="1"
-                  class="w-full h-40 object-cover object-center md:w-full sm:h-48"
-                  src="../images//Stay_Connected_with_Her_Family_and_Friends_At_Cheaper_Costs.webp"
-                  style="color: transparent"
-                />
-
-                <div
-                  class="w-full h-[calc(100%-160px)] md:w-full px-4 py-6 xl:py-8 space-y-1.5 md:space-y-3 col-between sm:h-[calc(100%-192px)] order-first md:order-last"
-                >
-                  <h4 class="text-base font-bold text-gray-800 md:text-lg">
-                    Stay Connected with Her Family and Friends At Cheaper Costs
-                  </h4>
-
-                  <div class="space-x-4 start flex">
-                    <h4
-                      class="text-xs font-medium flex text-gray-600 md:text-sm"
-                    >
-                      <svg
-                        width="18px"
-                        height="18px"
-                        class="text-base mr-2 fill-current text-gray-500 css-vubbuv"
-                        focusable="false"
-                        aria-hidden="true"
-                        viewBox="0 0 24 24"
-                        data-testid="AccessTimeIcon"
-                      >
-                        <path
-                          d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-                        ></path>
-                        <path
-                          d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"
-                        ></path>
-                      </svg>
-                      3 months ago
-                    </h4>
-
-                    <h4
-                      class="text-xs font-medium flex text-gray-600 md:text-sm"
-                    >
-                      <svg
-                        width="18px"
-                        height="18px"
-                        class="text-base mr-2 fill-current text-gray-500 css-vubbuv"
-                        focusable="false"
-                        aria-hidden="true"
-                        viewBox="0 0 24 24"
-                        data-testid="CommentOutlinedIcon"
-                      >
-                        <path
-                          d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM20 4v13.17L18.83 16H4V4h16zM6 12h12v2H6zm0-3h12v2H6zm0-3h12v2H6z"
-                        ></path>
-                      </svg>
-                      0
-                    </h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <a href="/blog/Where_do_business_owners_get_cheaper_data_bundle">
-            <div
-              data-aos="fade-up"
-              data-aos-once="true"
-              data-aos-duration="1000"
-              class="h-full"
-            >
-              <div
-                class="between-start md:flex-col md:flex-none h-full overflow-hidden transition-shadow bg-gray-200 rounded-md hover:shadow-md"
-              >
-                <img
-                  alt="Where do business owners get cheaper data bundle?"
-                  loading="lazy"
-                  width="150"
-                  height="150"
-                  decoding="async"
-                  data-nimg="1"
-                  class="w-full h-40 object-cover object-center md:w-full sm:h-48"
-                  src="../images/Where_do_business_owners_get_cheaper_data_bundle.webp"
-                  style="color: transparent"
-                />
-
-                <div
-                  class="w-2/3 h-[calc(100%-112px)] md:w-full px-4 py-6 xl:py-8 space-y-1.5 md:space-y-3 col-between sm:h-[calc(100%-192px)] order-first md:order-last"
-                >
-                  <h4 class="text-base font-bold text-gray-800 md:text-lg">
-                    Where do business owners get cheaper data bundle?
-                  </h4>
-
-                  <div class="space-x-4 start flex">
-                    <h4
-                      class="text-xs font-medium flex text-gray-600 md:text-sm"
-                    >
-                      <svg
-                        width="18px"
-                        height="18px"
-                        class="text-base mr-2 fill-current text-gray-500 css-vubbuv"
-                        focusable="false"
-                        aria-hidden="true"
-                        viewBox="0 0 24 24"
-                        data-testid="AccessTimeIcon"
-                      >
-                        <path
-                          d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-                        ></path>
-                        <path
-                          d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"
-                        ></path>
-                      </svg>
-                      3 months ago
-                    </h4>
-
-                    <h4
-                      class="text-xs font-medium flex text-gray-600 md:text-sm"
-                    >
-                      <svg
-                        width="18px"
-                        height="18px"
-                        class="text-base mr-2 fill-current text-gray-500 css-vubbuv"
-                        focusable="false"
-                        aria-hidden="true"
-                        viewBox="0 0 24 24"
-                        data-testid="CommentOutlinedIcon"
-                      >
-                        <path
-                          d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM20 4v13.17L18.83 16H4V4h16zM6 12h12v2H6zm0-3h12v2H6zm0-3h12v2H6z"
-                        ></path>
-                      </svg>
-                      0
-                    </h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div
-          class="mt-20 text-center"
+          class="text-center my-14 md:my-20 2xl:my-32 aos-init"
           data-aos="fade-up"
           data-aos-once="true"
           data-aos-duration="1000"
         >
-          <a href="/blog" class="flex items-center justify-center">
+          <a href="/about#services" class="flex items-center justify-center">
             <button
-              class="flex items-center px-4 text-sm normal-case md:px-6 lg:px-8 md:text-base text-[#D10A22] border-[#D10A22] border-2 rounded-md hover:border-transparent hover:bg-[#D10A22] hover:text-white space-x-2 space-y-8"
+              class="flex items-center px-4 text-sm normal-case md:px-6 lg:px-8 md:text-base text-[#D10A22] border-[#D10A22] border-2 rounded-md hover:border-transparent hover:bg-[#D10A22] hover:text-white space-y-8"
               tabindex="0"
               type="button"
             >
-              More
+              View All Services
               <span class="ml-2">
                 <svg
-                  class="h-4 w-4 fill-current hover:fill-[white]"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
+                  width="20px"
+                  height="20px"
+                  class="fill-current hover:fill-[white]"
                   focusable="false"
                   aria-hidden="true"
                   viewBox="0 0 24 24"
@@ -1030,121 +599,561 @@
             </button>
           </a>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section
-      data-aos="fade-up"
-      data-aos-once="true"
-      data-aos-duration="1000"
-      class="my-10 overflow-hidden sm:my-12 md:my-14 lg:my-16 xl:my-20 container mx-auto px-8 md:px-16"
-    >
-      <div class="slider-container flex flex-row justify-center">
-        <div class="slider-track flex flex-row">
-          <!-- Add your slider items here -->
-          <div class="slider-item">
-            <img
-              alt="GOTV"
-              loading="lazy"
-              width="160"
-              height="160"
-              decoding="async"
-              class="object-contain w-28 md:w-[160px] h-28 md:h-[160px]"
-              src="./images/gotv.png"
-              style="color: transparent"
-            />
+      <section id="articles" class="bg-gray-100 py-14 md:py-20 2xl:py-32">
+        <div class="col-center mx-auto p-8 md:px-40">
+          <div class="space-y-4 text-center w-fit col-center">
+            <h2
+              class="font-sans text-2xl font-bold text-gray-800 text-center lg:text-4xl"
+              data-aos="fade-up"
+              data-aos-once="true"
+              data-aos-duration="1000"
+            >
+              Top Articles
+            </h2>
           </div>
-          <div class="slider-item">
-            <img
-              alt="DSTV"
-              loading="lazy"
-              width="160"
-              height="160"
-              decoding="async"
-              class="object-contain w-28 md:w-[160px] h-28 md:h-[160px]"
-              src="./images/dstv.png"
-              style="color: transparent"
-            />
+
+          <div
+            class="grid mt-6 sm:grid-cols-2 lg:grid-cols-3 sm:mt-10 md:mt-14 lg:mt-20 sm:gap-x-10 md:gap-x-14 lg:gap-x-14 xl:gap-x-16 2xl:gap-x-20 gap-y-6 sm:gap-y-10 md:gap-y-14 lg:gap-y-28 auto-rows-auto"
+          >
+            <a
+              href="/blog/Cheaper_Data_Bundle_now_available_for_University_Students"
+            >
+              <div
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="h-full"
+              >
+                <div
+                  class="md:flex-none h-full overflow-hidden transition-shadow bg-gray-200 rounded-md hover:shadow-md"
+                >
+                  <img
+                    alt="Cheaper Data Bundle now available for University Students"
+                    loading="lazy"
+                    width="150"
+                    height="150"
+                    decoding="async"
+                    data-nimg="1"
+                    class="w-full h-40 object-cover object-center md:w-full sm:h-48"
+                    src="../images/Cheaper_Data_Bundle_now_available_for_University_Students.webp"
+                  />
+
+                  <div
+                    class="w-full h-[calc(100%-160px)] md:w-full px-4 py-6 xl:py-8 space-y-1.5 md:space-y-3 col-between sm:h-[calc(100%-192px)] order-first md:order-last"
+                  >
+                    <h4 class="text-base font-bold text-gray-800 md:text-lg">
+                      Cheaper Data Bundle now available for University Students
+                    </h4>
+
+                    <div class="space-x-4 start flex">
+                      <h4
+                        class="text-xs font-medium flex text-gray-600 md:text-sm"
+                      >
+                        <svg
+                          width="18px"
+                          height="18px"
+                          class="text-base mr-2 fill-current text-gray-500"
+                          focusable="false"
+                          aria-hidden="true"
+                          viewBox="0 0 24 24"
+                          data-testid="AccessTimeIcon"
+                        >
+                          <path
+                            d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                          ></path>
+                          <path
+                            d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+                          ></path>
+                        </svg>
+                        3 months ago
+                      </h4>
+
+                      <h4
+                        class="text-xs font-medium flex text-gray-600 md:text-sm"
+                      >
+                        <svg
+                          width="18px"
+                          height="18px"
+                          class="text-base mr-2 fill-current text-gray-500 css-vubbuv"
+                          focusable="false"
+                          aria-hidden="true"
+                          viewBox="0 0 24 24"
+                          data-testid="CommentOutlinedIcon"
+                        >
+                          <path
+                            d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM20 4v13.17L18.83 16H4V4h16zM6 12h12v2H6zm0-3h12v2H6zm0-3h12v2H6z"
+                          ></path>
+                        </svg>
+                        0
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="/blog/Stay_Connected_During_the_Elections_with_Cheaper_MTN_Data_Bundles"
+            >
+              <div
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="h-full"
+              >
+                <div
+                  class="between-start md:flex-col md:flex-none h-full overflow-hidden transition-shadow bg-gray-200 rounded-md hover:shadow-md"
+                >
+                  <img
+                    alt="Stay Connected During the Elections with Cheaper MTN Data Bundles"
+                    loading="lazy"
+                    width="150"
+                    height="150"
+                    decoding="async"
+                    data-nimg="1"
+                    class="w-full h-40 object-cover object-center md:w-full sm:h-48"
+                    src="../images/Stay_Connected_During_the_Elections_with_Cheaper_MTN_Data_Bundles.webp"
+                    style="color: transparent"
+                  />
+
+                  <div
+                    class="w-2/3 h-[calc(100%-112px)] md:w-full px-4 py-6 xl:py-8 space-y-1.5 md:space-y-3 col-between sm:h-[calc(100%-192px)] order-first md:order-last"
+                  >
+                    <h4 class="text-base font-bold text-gray-800 md:text-lg">
+                      Stay Connected During the Elections with Cheaper MTN Data
+                      Bundles
+                    </h4>
+
+                    <div class="space-x-4 start flex">
+                      <h4
+                        class="text-xs font-medium flex text-gray-600 md:text-sm"
+                      >
+                        <svg
+                          width="18px"
+                          height="18px"
+                          class="text-base mr-2 fill-current text-gray-500 css-vubbuv"
+                          focusable="false"
+                          aria-hidden="true"
+                          viewBox="0 0 24 24"
+                          data-testid="AccessTimeIcon"
+                        >
+                          <path
+                            d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                          ></path>
+                          <path
+                            d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+                          ></path>
+                        </svg>
+                        3 months ago
+                      </h4>
+
+                      <h4
+                        class="text-xs font-medium flex text-gray-600 md:text-sm"
+                      >
+                        <svg
+                          width="18px"
+                          height="18px"
+                          class="text-base mr-2 fill-current text-gray-500 css-vubbuv"
+                          focusable="false"
+                          aria-hidden="true"
+                          viewBox="0 0 24 24"
+                          data-testid="CommentOutlinedIcon"
+                        >
+                          <path
+                            d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM20 4v13.17L18.83 16H4V4h16zM6 12h12v2H6zm0-3h12v2H6zm0-3h12v2H6z"
+                          ></path>
+                        </svg>
+                        0
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="/blog/Stay_Connected_During_the_Elections_with_Cheaper_MTN_Data_Bundles_2"
+            >
+              <div
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="h-full"
+              >
+                <div
+                  class="between-start md:flex-col md:flex-none h-full overflow-hidden transition-shadow bg-gray-200 rounded-md hover:shadow-md"
+                >
+                  <img
+                    alt="Stay Connected During the Elections with Cheaper MTN Data Bundles"
+                    loading="lazy"
+                    width="150"
+                    height="150"
+                    decoding="async"
+                    data-nimg="1"
+                    class="w-full h-40 object-cover object-center md:w-full sm:h-48"
+                    src="../images/Stay_Connected_During_the_Elections_with_Cheaper_MTN_Data_Bundles_2.webp"
+                  />
+
+                  <div
+                    class="w-2/3 h-[calc(100%-112px)] md:w-full px-4 py-6 xl:py-8 space-y-1.5 md:space-y-3 col-between sm:h-[calc(100%-192px)] order-first md:order-last"
+                  >
+                    <h4 class="text-base font-bold text-gray-800 md:text-lg">
+                      Stay Connected During the Elections with Cheaper MTN Data
+                      Bundles
+                    </h4>
+
+                    <div class="space-x-4 start flex">
+                      <h4
+                        class="text-xs font-medium flex text-gray-600 md:text-sm"
+                      >
+                        <svg
+                          width="18px"
+                          height="18px"
+                          class="text-base mr-2 fill-current text-gray-500 css-vubbuv"
+                          focusable="false"
+                          aria-hidden="true"
+                          viewBox="0 0 24 24"
+                          data-testid="AccessTimeIcon"
+                        >
+                          <path
+                            d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                          ></path>
+                          <path
+                            d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+                          ></path>
+                        </svg>
+                        3 months ago
+                      </h4>
+
+                      <h4
+                        class="text-xs font-medium flex text-gray-600 md:text-sm"
+                      >
+                        <svg
+                          width="18px"
+                          height="18px"
+                          class="text-base mr-2 fill-current text-gray-500 css-vubbuv"
+                          focusable="false"
+                          aria-hidden="true"
+                          viewBox="0 0 24 24"
+                          data-testid="CommentOutlinedIcon"
+                        >
+                          <path
+                            d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM20 4v13.17L18.83 16H4V4h16zM6 12h12v2H6zm0-3h12v2H6zm0-3h12v2H6z"
+                          ></path>
+                        </svg>
+                        0
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="/blog/Stay_Connected_with_Her_Family_and_Friends_At_Cheaper_Costs"
+            >
+              <div
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="h-full"
+              >
+                <div
+                  class="md:flex-none h-full overflow-hidden transition-shadow bg-gray-200 rounded-md hover:shadow-md"
+                >
+                  <img
+                    alt="Stay Connected with Her Family and Friends At Cheaper Costs"
+                    loading="lazy"
+                    width="150"
+                    height="150"
+                    decoding="async"
+                    data-nimg="1"
+                    class="w-full h-40 object-cover object-center md:w-full sm:h-48"
+                    src="../images//Stay_Connected_with_Her_Family_and_Friends_At_Cheaper_Costs.webp"
+                    style="color: transparent"
+                  />
+
+                  <div
+                    class="w-full h-[calc(100%-160px)] md:w-full px-4 py-6 xl:py-8 space-y-1.5 md:space-y-3 col-between sm:h-[calc(100%-192px)] order-first md:order-last"
+                  >
+                    <h4 class="text-base font-bold text-gray-800 md:text-lg">
+                      Stay Connected with Her Family and Friends At Cheaper
+                      Costs
+                    </h4>
+
+                    <div class="space-x-4 start flex">
+                      <h4
+                        class="text-xs font-medium flex text-gray-600 md:text-sm"
+                      >
+                        <svg
+                          width="18px"
+                          height="18px"
+                          class="text-base mr-2 fill-current text-gray-500 css-vubbuv"
+                          focusable="false"
+                          aria-hidden="true"
+                          viewBox="0 0 24 24"
+                          data-testid="AccessTimeIcon"
+                        >
+                          <path
+                            d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                          ></path>
+                          <path
+                            d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+                          ></path>
+                        </svg>
+                        3 months ago
+                      </h4>
+
+                      <h4
+                        class="text-xs font-medium flex text-gray-600 md:text-sm"
+                      >
+                        <svg
+                          width="18px"
+                          height="18px"
+                          class="text-base mr-2 fill-current text-gray-500 css-vubbuv"
+                          focusable="false"
+                          aria-hidden="true"
+                          viewBox="0 0 24 24"
+                          data-testid="CommentOutlinedIcon"
+                        >
+                          <path
+                            d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM20 4v13.17L18.83 16H4V4h16zM6 12h12v2H6zm0-3h12v2H6zm0-3h12v2H6z"
+                          ></path>
+                        </svg>
+                        0
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="/blog/Where_do_business_owners_get_cheaper_data_bundle">
+              <div
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-duration="1000"
+                class="h-full"
+              >
+                <div
+                  class="between-start md:flex-col md:flex-none h-full overflow-hidden transition-shadow bg-gray-200 rounded-md hover:shadow-md"
+                >
+                  <img
+                    alt="Where do business owners get cheaper data bundle?"
+                    loading="lazy"
+                    width="150"
+                    height="150"
+                    decoding="async"
+                    data-nimg="1"
+                    class="w-full h-40 object-cover object-center md:w-full sm:h-48"
+                    src="../images/Where_do_business_owners_get_cheaper_data_bundle.webp"
+                    style="color: transparent"
+                  />
+
+                  <div
+                    class="w-2/3 h-[calc(100%-112px)] md:w-full px-4 py-6 xl:py-8 space-y-1.5 md:space-y-3 col-between sm:h-[calc(100%-192px)] order-first md:order-last"
+                  >
+                    <h4 class="text-base font-bold text-gray-800 md:text-lg">
+                      Where do business owners get cheaper data bundle?
+                    </h4>
+
+                    <div class="space-x-4 start flex">
+                      <h4
+                        class="text-xs font-medium flex text-gray-600 md:text-sm"
+                      >
+                        <svg
+                          width="18px"
+                          height="18px"
+                          class="text-base mr-2 fill-current text-gray-500 css-vubbuv"
+                          focusable="false"
+                          aria-hidden="true"
+                          viewBox="0 0 24 24"
+                          data-testid="AccessTimeIcon"
+                        >
+                          <path
+                            d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                          ></path>
+                          <path
+                            d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+                          ></path>
+                        </svg>
+                        3 months ago
+                      </h4>
+
+                      <h4
+                        class="text-xs font-medium flex text-gray-600 md:text-sm"
+                      >
+                        <svg
+                          width="18px"
+                          height="18px"
+                          class="text-base mr-2 fill-current text-gray-500 css-vubbuv"
+                          focusable="false"
+                          aria-hidden="true"
+                          viewBox="0 0 24 24"
+                          data-testid="CommentOutlinedIcon"
+                        >
+                          <path
+                            d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM20 4v13.17L18.83 16H4V4h16zM6 12h12v2H6zm0-3h12v2H6zm0-3h12v2H6z"
+                          ></path>
+                        </svg>
+                        0
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
           </div>
-          <div class="slider-item">
-            <img
-              alt="Smile"
-              loading="lazy"
-              width="160"
-              height="160"
-              decoding="async"
-              class="object-contain w-28 md:w-[160px] h-28 md:h-[160px]"
-              src="./images/smile.png"
-              style="color: transparent"
-            />
+
+          <div
+            class="mt-20 text-center"
+            data-aos="fade-up"
+            data-aos-once="true"
+            data-aos-duration="1000"
+          >
+            <a href="/blog" class="flex items-center justify-center">
+              <button
+                class="flex items-center px-4 text-sm normal-case md:px-6 lg:px-8 md:text-base text-[#D10A22] border-[#D10A22] border-2 rounded-md hover:border-transparent hover:bg-[#D10A22] hover:text-white space-x-2 space-y-8"
+                tabindex="0"
+                type="button"
+              >
+                More
+                <span class="ml-2">
+                  <svg
+                    class="h-4 w-4 fill-current hover:fill-[white]"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
+                    focusable="false"
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    data-testid="EastIcon"
+                  >
+                    <path
+                      d="m15 5-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
+                    ></path>
+                  </svg>
+                </span>
+                <span class="MuiTouchRipple-root css-w0pj6f"></span>
+              </button>
+            </a>
           </div>
-          <div class="slider-item">
-            <img
-              alt="MTN"
-              loading="lazy"
-              width="160"
-              height="160"
-              decoding="async"
-              class="object-contain w-28 md:w-[160px] h-28 md:h-[160px]"
-              src="./images/mtn.png"
-              style="color: transparent"
-            />
-          </div>
-          <div class="slider-item">
-            <img
-              alt="Glo"
-              loading="lazy"
-              width="160"
-              height="160"
-              decoding="async"
-              class="object-contain w-28 md:w-[160px] h-28 md:h-[160px]"
-              src="./images/globacom.png"
-              style="color: transparent"
-            />
-          </div>
-          <div class="slider-item">
-            <img
-              alt="9Mobile"
-              loading="lazy"
-              width="160"
-              height="160"
-              decoding="async"
-              class="object-contain w-28 md:w-[160px] h-28 md:h-[160px]"
-              src="./images/9mobile.png"
-              style="color: transparent"
-            />
-          </div>
-          <div class="slider-item">
-            <img
-              alt="Startimes"
-              loading="lazy"
-              width="160"
-              height="160"
-              decoding="async"
-              class="object-contain w-28 md:w-[160px] h-28 md:h-[160px]"
-              src="./images/startiems.png"
-              style="color: transparent"
-            />
-          </div>
-          <div class="slider-item">
-            <img
-              alt="Spectranet"
-              loading="lazy"
-              width="160"
-              height="160"
-              decoding="async"
-              class="object-contain w-28 md:w-[160px] h-28 md:h-[160px]"
-              src="./images/spectranet.png"
-              style="color: transparent"
-            />
-          </div>
-          <!-- Add more slider items as needed -->
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section
+        data-aos="fade-up"
+        data-aos-once="true"
+        data-aos-duration="1000"
+        class="my-10 overflow-hidden sm:my-12 md:my-14 lg:my-16 xl:my-20 mx-auto px-8 md:px-40"
+      >
+        <div class="flex flex-row justify-center">
+          <div class="slider flex flex-row justify-between">
+            <!-- Add your slider items here -->
+            <div class="">
+              <img
+                alt="GOTV"
+                loading="lazy"
+                width="160"
+                height="160"
+                decoding="async"
+                class="object-contain w-28 md:w-[160px] h-28 md:h-[160px]"
+                src="./images/gotv.png"
+                style="color: transparent"
+              />
+            </div>
+            <div class="">
+              <img
+                alt="DSTV"
+                loading="lazy"
+                width="160"
+                height="160"
+                decoding="async"
+                class="object-contain w-28 md:w-[160px] h-28 md:h-[160px]"
+                src="./images/dstv.png"
+                style="color: transparent"
+              />
+            </div>
+            <div class="">
+              <img
+                alt="Smile"
+                loading="lazy"
+                width="160"
+                height="160"
+                decoding="async"
+                class="object-contain w-28 md:w-[160px] h-28 md:h-[160px]"
+                src="./images/smile.png"
+                style="color: transparent"
+              />
+            </div>
+            <div class="">
+              <img
+                alt="MTN"
+                loading="lazy"
+                width="160"
+                height="160"
+                decoding="async"
+                class="object-contain w-28 md:w-[160px] h-28 md:h-[160px]"
+                src="./images/mtn.png"
+                style="color: transparent"
+              />
+            </div>
+            <div class="">
+              <img
+                alt="Glo"
+                loading="lazy"
+                width="160"
+                height="160"
+                decoding="async"
+                class="object-contain w-28 md:w-[160px] h-28 md:h-[160px]"
+                src="./images/globacom.png"
+                style="color: transparent"
+              />
+            </div>
+            <div class="">
+              <img
+                alt="9Mobile"
+                loading="lazy"
+                width="160"
+                height="160"
+                decoding="async"
+                class="object-contain w-28 md:w-[160px] h-28 md:h-[160px]"
+                src="./images/9mobile.png"
+                style="color: transparent"
+              />
+            </div>
+            <div class="">
+              <img
+                alt="Startimes"
+                loading="lazy"
+                width="160"
+                height="160"
+                decoding="async"
+                class="object-contain w-28 md:w-[160px] h-28 md:h-[160px]"
+                src="./images/startiems.png"
+                style="color: transparent"
+              />
+            </div>
+            <div class="">
+              <img
+                alt="Spectranet"
+                loading="lazy"
+                width="160"
+                height="160"
+                decoding="async"
+                class="object-contain w-28 md:w-[160px] h-28 md:h-[160px]"
+                src="./images/spectranet.png"
+                style="color: transparent"
+              />
+            </div>
+            <!-- Add more slider items as needed -->
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer
-      class="py-10 font-medium tracking-wide text-zinc-300 bg-zinc-700 md:py-14 2xl:py-20"
+      class="hide-on-mobile-nav py-10 font-medium tracking-wide text-zinc-300 bg-zinc-700 md:py-14 2xl:py-20"
     >
       <div
         class="mx-auto px-8 md:px-40 flex flex-col lg:flex-row lg:flex lg:justify-between"
@@ -1242,7 +1251,7 @@
       </div>
     </footer>
 
-    <script src="./app.js"></script>
+    <script src="./home.js"></script>
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <script>
       AOS.init();
