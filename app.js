@@ -4,6 +4,31 @@ document.addEventListener("DOMContentLoaded", function () {
   const mobileMenu = document.getElementById("mobileMenu");
   const sectionsToHide = document.querySelectorAll(".hide-on-mobile-nav");
 
+  // Get all mobile menu links
+  const mobileMenuLinks = document.querySelectorAll("#mobileMenu a");
+
+  // Add event listener to each mobile menu link
+  mobileMenuLinks.forEach((link) => {
+    link.addEventListener("click", function (event) {
+      // Close the mobile menu when a link is clicked
+      mobileMenu.classList.add("hidden");
+
+      // Hide the sections when a link is clicked (optional)
+      sectionsToHide.forEach((section) => {
+        section.classList.add("hidden");
+      });
+
+      // Prevent the default link behavior to allow routing to the correct address
+      event.preventDefault();
+
+      // Get the href attribute from the clicked link
+      const href = link.getAttribute("href");
+
+      // Route to the correct address
+      window.location.href = href;
+    });
+  });
+
   if (!mobileMenu.classList.contains("hidden")) {
     // Add tailwind class to hide other sections
     sectionsToHide.forEach((section) => {
