@@ -9,10 +9,13 @@
       href="https://cdn.rawgit.com/michalsnik/aos/2.3.4/dist/aos.css"
       rel="stylesheet"
     />
-
     <link
       rel="stylesheet"
       href="./node_modules/a11y-slider/dist/a11y-slider.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <script src="./node_modules/a11y-slider/dist/a11y-slider.js"></script>
     <title>Home | The Data Well Nigeria</title>
@@ -61,41 +64,43 @@
           </button>
 
           <!-- Mobile Menu -->
-          <ul
-            id="mobileMenu"
-            class="hidden flex flex-col mx-auto items-center absolute z-10 bg-white h-screen mt-24 w-screen"
-          >
-            <li
-              class="before:w-full text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+          <div id="mobileMenuContainer" class="lg:hidden">
+            <ul
+              id="mobileMenu"
+              class="hidden flex flex-col mx-auto items-center absolute z-10 bg-white h-screen mt-24 w-screen animate__animated animate__fadeInLeft"
             >
-              <a href="/">Home</a>
-            </li>
-            <li
-              class="false text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
-            >
-              <a href="/about.html">About</a>
-            </li>
-            <li
-              class="false text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
-            >
-              <a href="/about.html">Services</a>
-            </li>
-            <li
-              class="false text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
-            >
-              <a href="/pricing.html">Pricing</a>
-            </li>
-            <li
-              class="false text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
-            >
-              <a href="/contact.html">Contact</a>
-            </li>
-            <li
-              class="false text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
-            >
-              <a href="./blog/blog.html">Blog</a>
-            </li>
-          </ul>
+              <li
+                class="before:w-full text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+              >
+                <a href="/">Home</a>
+              </li>
+              <li
+                class="false text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+              >
+                <a href="/about.html">About</a>
+              </li>
+              <li
+                class="false text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+              >
+                <a href="/about.html">Services</a>
+              </li>
+              <li
+                class="false text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+              >
+                <a href="/pricing.html">Pricing</a>
+              </li>
+              <li
+                class="false text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+              >
+                <a href="/contact.html">Contact</a>
+              </li>
+              <li
+                class="false text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+              >
+                <a href="./blog/blog.html">Blog</a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <!-- Login Button -->

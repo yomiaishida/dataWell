@@ -47,18 +47,20 @@ document.addEventListener("DOMContentLoaded", function () {
   // show hamburger and search icon's svg
   const hamburgerBtn = document.getElementById("hamburgerBtn");
   const mobileMenu = document.getElementById("mobileMenu");
-  const sectionsToHide = document.querySelectorAll(".hide-on-mobile-nav");
 
-  hamburgerBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-    if (!mobileMenu.classList.contains("hidden")) {
-      // Toggle the visibility of the sections to hide
-      sectionsToHide.forEach((section) => {
-        section.classList.add("hidden");
-      });
+  // Get navbar menu container
+  const mobileMenuContainer = document.getElementById("mobileMenuContainer");
+});
+let mobileMenuVisible = false;
 
-      // Cancel icon SVG
-      hamburgerBtn.innerHTML = `<svg
+const toggleMenu = () => {
+  if (!mobileMenuVisible) {
+    // Show the mobile menu and apply fadeInLeft animation
+    mobileMenu.classList.remove("hidden");
+    animateCSS(mobileMenu, "fadeInLeft");
+
+    // Change the icon to the close icon
+    hamburgerBtn.innerHTML = `<svg
         class="fill-gray-400 w-4 h-4"
         focusable="false"
         aria-hidden="true"
@@ -69,28 +71,48 @@ document.addEventListener("DOMContentLoaded", function () {
           d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
         ></path>
       </svg>`;
-    } else {
-      // Toggle the visibility of the sections to hide
-      sectionsToHide.forEach((section) => {
-        section.classList.remove("hidden");
-      });
+  } else {
+    // Apply fadeOutLeft animation and hide the mobile menu after the animation
+    animateCSS(mobileMenu, "fadeOutLeft").then(() => {
+      mobileMenu.classList.add("hidden");
+    });
 
-      // Hamburger menu icon SVG
-      hamburgerBtn.innerHTML = `
-        <svg
-                  class="w-4 h-4 fill-gray-400"
-                  focusable="false"
-                  aria-hidden="true"
-                  viewBox="0 0 24 24"
-                  data-testid="MenuIcon"
-                >
-                  <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
-                </svg>
-          `;
+    // Change the icon back to the hamburger icon
+    hamburgerBtn.innerHTML = `
+      <svg
+        class="w-4 h-4 fill-gray-400"
+        focusable="false"
+        aria-hidden="true"
+        viewBox="0 0 24 24"
+        data-testid="MenuIcon"
+      >
+        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+      </svg>`;
+  }
+
+  // Toggle the mobileMenuVisible flag
+  mobileMenuVisible = !mobileMenuVisible;
+};
+
+hamburgerBtn.addEventListener("click", toggleMenu);
+
+const animateCSS = (element, animation, prefix = "animate__") =>
+  // We create a Promise and return it
+  new Promise((resolve, reject) => {
+    const animationName = `${prefix}${animation}`;
+    const node = element;
+
+    node.classList.add(`${prefix}animated`, animationName);
+
+    // When the animation ends, we clean the classes and resolve the Promise
+    function handleAnimationEnd(event) {
+      event.stopPropagation();
+      node.classList.remove(`${prefix}animated`, animationName);
+      resolve("Animation ended");
     }
-  });
-});
 
+    node.addEventListener("animationend", handleAnimationEnd, { once: true });
+  });
 // Display Search Cancel Icon when search icon is clicked
 const searchIcon = document.getElementById("searchIcon");
 const searchInput = document.getElementById("searchInput");
@@ -160,6 +182,7 @@ lgSearchIcon.addEventListener("click", () => {
   lgSearchInput.focus();
 });
 
+// Initialize A11y Slider
 const slider = new A11YSlider(document.querySelector(".slider"), {
   swipe: true,
   autoplay: true,
