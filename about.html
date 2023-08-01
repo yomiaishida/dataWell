@@ -12,7 +12,39 @@
       rel="stylesheet"
       href="./node_modules/a11y-slider/dist/a11y-slider.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <script src="./node_modules/a11y-slider/dist/a11y-slider.js"></script>
+    <style>
+      /* Custom CSS for sliding animation */
+      /* .slide-in {
+        animation: slideIn 4.9s ease-in-out;
+      }
+
+      .slide-out {
+        animation: slideOut 4.9s ease-in-out;
+      } */
+
+      /* @keyframes slideIn {
+        from {
+          transform: translateX(-50%);
+        }
+        to {
+          transform: translateX(10%);
+        }
+      } */
+      /* 
+      @keyframes slideOut {
+        from {
+          transform: translateX(-400%);
+        }
+        to {
+          transform: translateX(0%);
+        }
+      } */
+    </style>
     <title>About us | The Data Well Niegeria</title>
   </head>
   <body>
@@ -59,41 +91,43 @@
           </button>
 
           <!-- Mobile Menu -->
-          <ul
-            id="mobileMenu"
-            class="hidden flex flex-col mx-auto items-center absolute z-10 bg-white ml-0 h-screen mt-20 w-screen"
-          >
-            <li
-              class="text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+          <div class="" id="mobileMenuContainer">
+            <ul
+              id="mobileMenu"
+              class="mobileMenu hidden flex flex-col mx-auto items-center absolute z-10 bg-white ml-0 h-screen mt-20 w-screen animate__animated animate__fadeInLeft"
             >
-              <a href="/">Home</a>
-            </li>
-            <li
-              class="before:w-full text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
-            >
-              <a href="/about.html">About</a>
-            </li>
-            <li
-              class="false text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
-            >
-              <a href="about.html#services">Services</a>
-            </li>
-            <li
-              class="false text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
-            >
-              <a href="/pricing.html">Pricing</a>
-            </li>
-            <li
-              class="false text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
-            >
-              <a href="/contact.html">Contact</a>
-            </li>
-            <li
-              class="false text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
-            >
-              <a href="./blog/blog.html">Blog</a>
-            </li>
-          </ul>
+              <li
+                class="text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+              >
+                <a href="/">Home</a>
+              </li>
+              <li
+                class="before:w-full text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+              >
+                <a href="/about.html">About</a>
+              </li>
+              <li
+                class="false text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+              >
+                <a href="about.html#services">Services</a>
+              </li>
+              <li
+                class="false text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+              >
+                <a href="/pricing.html">Pricing</a>
+              </li>
+              <li
+                class="false text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+              >
+                <a href="/contact.html">Contact</a>
+              </li>
+              <li
+                class="false text-neutral-700 hover:text-black before:bg-neutral-700 py-6 font-bold tracking-wide before:transition-all hover:transition-all transition-all before:absolute relative before:bottom-4 before:rounded-full before:h-1 before:hover:w-1/2"
+              >
+                <a href="./blog/blog.html">Blog</a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <!-- Login Button -->
@@ -273,7 +307,7 @@
       </div>
     </nav>
 
-    <main id="main" class="hide-on-mobile-nav hidden">
+    <main id="main" class="hide-on-mobile-nav">
       <section
         class="flex container mx-auto px-4 md:px-0 justify-center bg-gray-100 h-60 lg:h-96"
       >

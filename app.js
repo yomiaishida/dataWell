@@ -3,103 +3,79 @@ document.addEventListener("DOMContentLoaded", function () {
   const hamburgerBtn = document.getElementById("hamburgerBtn");
   const mobileMenu = document.getElementById("mobileMenu");
   const sectionsToHide = document.querySelectorAll(".hide-on-mobile-nav");
+  let mobileMenuVisible = false;
 
-  // Get all mobile menu links
-  const mobileMenuLinks = document.querySelectorAll("#mobileMenu a");
-
-  // // Add event listener to each mobile menu link
-  // mobileMenuLinks.forEach((link) => {
-  //   link.addEventListener("click", function (event) {
-  //     // Close the mobile menu when a link is clicked
-  //     mobileMenu.classList.add("hidden");
-
-  //     // Hide the sections when a link is clicked (optional)
-  //     sectionsToHide.forEach((section) => {
-  //       section.classList.add("hidden");
-  //     });
-
-  //     // Prevent the default link behavior to allow routing to the correct address
-  //     event.preventDefault();
-
-  //     // Get the href attribute from the clicked link
-  //     const href = link.getAttribute("href");
-
-  //     // Route to the correct address
-  //     window.location.href = href;
-  //   });
-  // });
-
-  if (!mobileMenu.classList.contains("hidden")) {
-    // Add tailwind class to hide other sections
-    sectionsToHide.forEach((section) => {
-      section.classList.add("hidden");
-    });
-  } else {
-    // Remove tailwind class that hides other section
-    sectionsToHide.forEach((section) => {
-      section.classList.remove("hidden");
-    });
-  }
-
-  hamburgerBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-    if (!mobileMenu.classList.contains("hidden")) {
+  const toggleMenu = () => {
+    if (!mobileMenuVisible) {
       // Add tailwind class to hide other sections
       sectionsToHide.forEach((section) => {
         section.classList.add("hidden");
       });
 
-      // Cancel icon SVG
+      // Show the mobile menu and apply fadeInLeft animation
+      mobileMenu.classList.remove("hidden");
+      animateCSS(mobileMenu, "fadeInLeft");
+
+      // Change the icon to the close icon
       hamburgerBtn.innerHTML = `<svg
-      class="fill-gray-400 w-4 h-4"
-      focusable="false"
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      data-testid="CloseIcon"
-    >
-      <path
-        d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
-      ></path>
-    </svg>`;
+        class="fill-gray-400 w-4 h-4"
+        focusable="false"
+        aria-hidden="true"
+        viewBox="0 0 24 24"
+        data-testid="CloseIcon"
+      >
+        <path
+          d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+        ></path>
+      </svg>`;
     } else {
       // Toggle the visibility of the sections to hide
       sectionsToHide.forEach((section) => {
         section.classList.remove("hidden");
       });
 
-      // Hamburger menu icon SVG
+      // Apply fadeOutLeft animation and hide the mobile menu after the animation
+      animateCSS(mobileMenu, "fadeOutLeft").then(() => {
+        mobileMenu.classList.add("hidden");
+      });
+
+      // Change the icon back to the hamburger icon
       hamburgerBtn.innerHTML = `
       <svg
-                class="w-4 h-4 fill-gray-400"
-                focusable="false"
-                aria-hidden="true"
-                viewBox="0 0 24 24"
-                data-testid="MenuIcon"
-              >
-                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
-              </svg>
-        `;
+        class="w-4 h-4 fill-gray-400"
+        focusable="false"
+        aria-hidden="true"
+        viewBox="0 0 24 24"
+        data-testid="MenuIcon"
+      >
+        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+      </svg>`;
     }
-  });
 
-  // function hideNavigationMenu() {
-  //   // Hide the mobile menu
-  //   const mobileMenu = document.getElementById("mobileMenu");
-  //   mobileMenu.classList.add("hidden");
+    // Toggle the mobileMenuVisible flag
+    mobileMenuVisible = !mobileMenuVisible;
+  };
 
-  //   // Hide the sections to hide (optional)
-  //   const sectionsToHide = document.querySelectorAll(".hide-on-mobile-nav");
-  //   sectionsToHide.forEach((section) => {
-  //     section.classList.add("hidden");
-  //   });
+  hamburgerBtn.addEventListener("click", toggleMenu);
 
-  //   console.log(sectionsToHide);
-  //   console.log(mobileMenu);
-  // }
+  const animateCSS = (element, animation, prefix = "animate__") =>
+    // We create a Promise and return it
+    new Promise((resolve, reject) => {
+      const animationName = `${prefix}${animation}`;
+      const node = element;
+
+      node.classList.add(`${prefix}animated`, animationName);
+
+      // When the animation ends, we clean the classes and resolve the Promise
+      function handleAnimationEnd(event) {
+        event.stopPropagation();
+        node.classList.remove(`${prefix}animated`, animationName);
+        resolve("Animation ended");
+      }
+
+      node.addEventListener("animationend", handleAnimationEnd, { once: true });
+    });
 });
-
-// Add an event listener to the window object to detect page unload (navigation to another page)
-// window.addEventListener("beforeunload", hideNavigationMenu);
 
 // Display Search Cancel Icon when search icon is clicked
 const searchIcon = document.getElementById("searchIcon");
